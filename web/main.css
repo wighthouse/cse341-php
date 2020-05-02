@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+div {
+    height: 200px;
+    width: 60%;
+    padding: 20px;
+    margin: auto;
+}
+
+div:hover {
+    font-weight: bold;
+}
+
+#div1 {
+    background-color: lightblue;
+}
+
+#div2 {
+    background-color: lightyellow;
+}
+
+#div3 {
+    background-color: lightseagreen;
+}
+
+div:last-of-type {
+    margin-bottom: 20px;
+}
