@@ -17,7 +17,7 @@
     </header>
     <main>
         <div class="main-container">
-            <h1 class="page-title">My Passions</h1>
+            <h2 class="page-title">My Passions</h2>
             <div class="home-info">
                 <div class="fig-background">
                     <figure>
@@ -29,8 +29,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                </a>
-                <a href="#">
+               
                     <div class="fig-background">
                         <figure>
                             <img src="images/kenya-hair-touching.jpg" alt="Maretta in Kenya">
@@ -40,8 +39,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                </a>
-                <a href="#">
+                
                     <div class="fig-background">
                         <figure>
                             <img src="images/flowers.jpg" alt="Flower images">
@@ -51,7 +49,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                </a>
+                
             </div>
         </div>
 
