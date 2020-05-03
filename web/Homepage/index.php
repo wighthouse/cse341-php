@@ -8,9 +8,6 @@
 
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
-    <!-- <link rel="shortcut icon" type="image/png"
-                href="#">
-            <link rel="apple-touch-icon" href="#"> -->
 
 </head>
 
@@ -70,12 +67,9 @@
         </div>
 
     </main>
-    <!-- <div class="main-color-bar"></div> -->
+
     <footer>
-        <div class="footer-container">
-            <p class="footer-copy">&copy;2020 by Maretta Wight. All Rights Reserved
-            </p>
-        </div>
+    <?php include 'footer.php';?>
     </footer>
 </body>
 
