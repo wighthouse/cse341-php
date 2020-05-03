@@ -13,18 +13,7 @@
 
 <body>
     <header>
-        <div class="top-border"></div>
-        </div>
-        <nav class="header-nav">
-            <div class="nav-container">
-                <ul>
-                    <li><a class="current" href="index.html">Home</a></li>
-                    <li><a href="assignments.html">Assignments</a></li>
-
-
-                </ul>
-            </div>
-        </nav>
+    <?php include 'php/header.php';?>
     </header>
     <main>
         <div class="main-container">
