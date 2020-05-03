@@ -96,10 +96,6 @@ main {
 }
 
 .page-title {
-    margin-top: 40px;
-}
-
-main h1 {
     color: #50006d;
     margin-top: 20px;
     text-align: center;
@@ -115,10 +111,8 @@ figure {
     overflow: hidden;
     margin: 0px;
     float: left;
-    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     text-align: center;
-    -webkit-transition: opacity 1s;
     transition: opacity 1s;
 }
 
