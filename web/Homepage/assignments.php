@@ -17,7 +17,7 @@
     </header>
     <main>
         <div class="main-container">
-            <h1>Coming Soon</h1>
+            <h1 class="page-title">Coming Soon</h1>
             <div class="home-info">
                 
             </div>
