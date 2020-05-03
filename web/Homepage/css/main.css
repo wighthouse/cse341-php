@@ -61,7 +61,7 @@ nav {
 }
 
 .header-nav ul li a:hover {
-    color: #50006d;
+    color: #363636;
 }
 
 .header-nav ul li a:active {
@@ -77,7 +77,7 @@ nav {
 }
 
 .current:hover {
-    border-bottom: 2px solid #50006d;
+    border-bottom: 2px solid #363636;
 }
 
 .current:active {
@@ -158,16 +158,6 @@ figcaption p {
     float: left;
 }
 
-.main-color-bar {
-    width: 100%;
-    height: 390px;
-    background-color: #50006d;
-    z-index: -1;
-    opacity: .6;
-    position: relative;
-    margin-top: 360px;
-}
-
 footer {
     height: 75px;
     background-color: #50006d;
@@ -178,7 +168,7 @@ footer {
     bottom: 0;
 }
 
-.footer-copy {
+.footer-container {
     width: 100%;
     padding-top: 20px;
     font-size: .8em;
