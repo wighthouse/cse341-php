@@ -36,6 +36,12 @@ nav {
     margin: auto;
 }
 
+.nav-container h1 {
+    color: #ffffff;
+    padding: 15px 0;
+    float: left;
+}
+
 .header-nav ul {
     list-style: none;
     overflow: hidden;
