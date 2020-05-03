@@ -6,7 +6,7 @@
 
     <title>CTE341 | Web Backend Development II</title>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
 
 </head>
