@@ -60,6 +60,7 @@ nav {
     display: block;
     text-decoration: none;
     color: #ffffff;
+    opacity: 1;
 }
 
 .header-nav ul li a:visited {
@@ -67,7 +68,7 @@ nav {
 }
 
 .header-nav ul li a:hover {
-    color: #363636;
+    color: #50006d;
 }
 
 .header-nav ul li a:active {
