@@ -59,9 +59,9 @@ $information = array(
         foreach($places as $visited) {
             $visited_clean = htmlspecialchars($visited);
             
-            echo $information[$visited][0] ."<br>".
-             $information[$visited][1]."<br>".
-           $information[$visited][2]."<br>".
+            echo "<b>Continent: </b>".$information[$visited][0] ."<b> Area: </b>".
+             $information[$visited][1]."<b> Highest Point: </b>".
+           $information[$visited][2]."<b> Lowest Point: </b>".
             $information[$visited][3]."<br>";
                                 
         }
