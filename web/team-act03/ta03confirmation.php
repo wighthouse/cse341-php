@@ -46,26 +46,32 @@ $information = array(
     </span></p>
     <h4>Basic info on the continents you've visited:</h4>
 
-<?php
+ <?php
+ echo "<table>
+ <tr>
+   <th>Continent</th>
+   <th>Area</th>
+   <th>Highest Point</th>
+   <th>Lowest Point</th>
+ </tr>";
  if(!empty($places)){
-        echo "<table>
-        <tr>
-          <th>Continent</th>
-          <th>Area</th>
-          <th>Highest Point</th>
-          <th>Lowest Point</th>
-        </tr>";
-
+       
         foreach($places as $visited) {
             $visited_clean = htmlspecialchars($visited);
-            echo "<tr><td>". $information[$visited][0] ."</td>
-            <td>". $information[$visited][1]."</td>
-            <td>".$information[$visited][2]."</td>
-            <td>".$information[$visited][3]>"</td></tr>";
+            
+            echo $information[$visited][0] ."<br>".
+             $information[$visited][1]."<br>".
+           $information[$visited][2]."<br>".
+            $information[$visited][3]."<br>";
                                 
         }
         echo "</table>";
     };
-    ?>
+    ?> 
 </body>
 </html>
+
+<!-- echo "<tr><td>". $information[$visited][0] ."</td>
+            <td>". $information[$visited][1]."</td>
+            <td>".$information[$visited][2]."</td>
+            <td>".$information[$visited][3]>"</td></tr>"; -->
