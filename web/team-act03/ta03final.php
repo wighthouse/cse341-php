@@ -24,7 +24,7 @@ $major=array("CS"=>"Computer Science","WebDev"=>"Web Design and Development","CI
            <?php
                 foreach($major as $x=>$x_value)
             {
-                echo "<input type='radio' name='{$x}'>{$x_value}<br>";
+                echo "<input type='radio' name='major' value='{$x_value}'>{$x_value}<br>";
   
             }
             ?>
