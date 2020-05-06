@@ -12,29 +12,27 @@ echo "Peter's major is " . $major['CE'];
 <body id="mainBody">
     <form action="ta03confirmation.php" method="post">
         <!--User Name and Email-->
+        <fieldset>
+        <legend>Contact Info</legend>
         <label for="userName">Name: <input type="text" name="userName"></label><br>
         <label for="userEmail">Email: <input type="text" name="userEmail"></label><br>
-        <!--Radio list of major-->
-        <!-- <input type="radio" id="CS" name="major" value="Computer Science">
-        <label for="CS">Computer Science</label><br>
-        <input type="radio" id="WebDev" name="major" value="Web Design and Development">
-        <label for="WebDev">Web Design and Development</label><br>
-        <input type="radio" id="CIT" name="major" value="Computer Information Technology">
-        <label for="CIT">Computer Information Technology</label><br>
-        <input type="radio" id="CE" name="major" value="Computer Engineering">
-        <label for="CE">Computer Engineering</label><br><br> -->
-        <!--Which countries did the user visit?-->
+        
+</fieldset>
+            
         <!-- New and Improved Radio List - with associative array-->
-        <?php
-
-foreach($major as $x=>$x_value)
-  {
-  echo "<input type='radio' name='{$x}'>{$x_value}<br>";
+       <fieldset>
+           <legend>What is your major?</legend> 
+           <?php
+                foreach($major as $x=>$x_value)
+            {
+                echo "<input type='radio' name='major'>{$x_value}<br>";
   
-  }
-?>
+            }
+            ?>
 
-
+<!--Which countries did the user visit?-->
+<fieldset>
+           <legend>What continents have you visited?</legend> 
         <input type="checkbox" name="places[]" id="northAmerica" value="0"><label for="northAmerica">North America</label><br />
         <input type="checkbox" name="places[]" id="southAmerica" value="1"><label for="southAmerica">South America</label><br />
         <input type="checkbox" name="places[]" id="europe" value="2"><label for="europe">Europe</label><br />
@@ -44,6 +42,7 @@ foreach($major as $x=>$x_value)
         <input type="checkbox" name="places[]" id="antarctica" value="6"><label for="Antarctica">Antarctica</label><br />
         <!--User thoughts-->
         <label for="comments"><textarea name="comments" cols="20" rows="4">Enter Your Comments...</textarea></label><br>
+        </fieldset>
         <input class="button" type="submit" name="submit" value="Submit">
     </form>
 </body>
