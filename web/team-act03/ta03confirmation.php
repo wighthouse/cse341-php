@@ -44,7 +44,7 @@ $information = array(
             
     ?>
     </span></p>
-    <h4>Basic info on the continents you've visited</h4>
+    <h4>Basic info on the continents you've visited:</h4>
 
 <?php
  if(!empty($places)){
@@ -58,7 +58,7 @@ $information = array(
 
         foreach($places as $visited) {
             $visited_clean = htmlspecialchars($visited);
-            echo "<tr><td>{'$information[$visited][0]'}</td>
+            echo "<tr><td>'$information[$visited][0]'</td>
             <td>{'$information[$visited][1]'}</td>
             <td>{'$information[$visited][2]'}</td>
             <td>{'$information[$visited][3]'}</td></tr>";
