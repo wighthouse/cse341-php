@@ -38,13 +38,13 @@ $information = array(
                 foreach ($places as $visited)
                 {
                     $visited_clean = htmlspecialchars($visited);
-                    echo $visited . "<br>";
+                    echo $information[$visited][0] . "<br>";
                 }
             }
             
     ?>
     </span></p>
-    <h4>Basic info on places you've visited</h4>
+    <h4>Basic info on the continents you've visited</h4>
 
 <?php
  if(!empty($places)){
