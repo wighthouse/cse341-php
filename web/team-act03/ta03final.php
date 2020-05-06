@@ -40,7 +40,7 @@ $major=array("CS"=>"Computer Science","WebDev"=>"Web Design and Development","CI
         <input type="checkbox" name="places[]" id="africa" value="5"><label for="africa">Africa</label><br />
         <input type="checkbox" name="places[]" id="antarctica" value="6"><label for="Antarctica">Antarctica</label><br />
         <!--User thoughts-->
-        <label for="comments"><textarea name="comments" cols="20" rows="4">Enter Your Comments...</textarea></label><br>
+        <label for="comments">Enter Your Comments...<textarea name="comments" cols="20" rows="4"></textarea></label><br>
         </fieldset>
         <input class="button" type="submit" name="submit" value="Submit">
     </form>
