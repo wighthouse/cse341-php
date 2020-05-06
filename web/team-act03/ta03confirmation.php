@@ -13,13 +13,12 @@ $information = array(
     array("Australia") ,
     array("Africa") ,
     array("Antartica"));
-
-?>
-<!-- ​// "Europe is amazing.  It unfortunetly has been the site of 2 World Wars.  There are many historical sites worth visiting though." => "2",
+ ​// "Europe is amazing.  It unfortunetly has been the site of 2 World Wars.  There are many historical sites worth visiting though." => "2",
     // "Asia is a very beautiful place.  There are many types of activities for all, between the nightlife, beaches, and quiet places to meditate." => "3",
     // "Australia: Kangaroos, koalas, and the Great Barrier Reef. So many different places to visit." => "4",
     // "Since you have visited Africa, you know that it is the 2nd largest continent in both land and in population.  There are only a few parts of the continent that you'd consider cold." => "5",
-    // "Antartica.  Guess what? Its cold.  And penguins.  Lots of ice.  But it has penguins!" => "6", -->
+    // "Antartica.  Guess what? Its cold.  And penguins.  Lots of ice.  But it has penguins!" => "6", 
+?>
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -33,8 +32,8 @@ $information = array(
     <p><b>Major: </b><span><?php echo $major ?></span></p>
     <p><b>Comments: </b><span><?php echo $comments ?></span></p>
     <p><b>Continents you've visited: </b><br><span>
-    <?php echo
-            if(!empty($places))
+    <?php 
+             if(!empty($places))
             {
                 foreach ($places as $visited)
                 {
