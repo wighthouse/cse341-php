@@ -24,6 +24,17 @@ echo "Peter's major is " . $major['CE'];
         <input type="radio" id="CE" name="major" value="Computer Engineering">
         <label for="CE">Computer Engineering</label><br><br> -->
         <!--Which countries did the user visit?-->
+        <!-- New and Improved Radio List - with associative array-->
+        <?php
+
+foreach($major as $x=>$x_value)
+  {
+  echo "<input type='radio' name='{$x}'>{$x_value}<br>";
+  
+  }
+?>
+
+
         <input type="checkbox" name="places[]" id="northAmerica" value="0"><label for="northAmerica">North America</label><br />
         <input type="checkbox" name="places[]" id="southAmerica" value="1"><label for="southAmerica">South America</label><br />
         <input type="checkbox" name="places[]" id="europe" value="2"><label for="europe">Europe</label><br />
