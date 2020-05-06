@@ -41,12 +41,12 @@ $information = array(
     ?>
     <h4>Basic info on places you've visited</h4>
 <?php
-        $countryNumber = 1;
+        $continentNumber = 1;
         foreach($places as $visited) {
-            echo "<p>Country {$countryNumber}: ";
+            echo "<p>continent {$continentNumber}: ";
             echo array_search($visited, $information);
             echo "</p>";
-            $countryNumber++;
+            $continentNumber++;
         };
     ?>
 </body>

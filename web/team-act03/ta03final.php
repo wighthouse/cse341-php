@@ -1,6 +1,5 @@
 <?php
 $major=array("CS"=>"Computer Science","WebDev"=>"Web Design and Development","CIT"=>"Computer Information Technology", "CE"=> "Computer Engineering");
-echo "Peter's major is " . $major['CE'];
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -25,11 +24,11 @@ echo "Peter's major is " . $major['CE'];
            <?php
                 foreach($major as $x=>$x_value)
             {
-                echo "<input type='radio' name='major'>{$x_value}<br>";
+                echo "<input type='radio' name='{$x}'>{$x_value}<br>";
   
             }
             ?>
-
+</fieldset>
 <!--Which countries did the user visit?-->
 <fieldset>
            <legend>What continents have you visited?</legend> 
