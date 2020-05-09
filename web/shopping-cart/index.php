@@ -29,12 +29,12 @@
 <div id="item_div">
 
   <div class="items" id="item1">
-    <img src="product1.jpg">
+    <img src="images/products/bomb.png">
     <input type="button" value="Add To CART" onclick="cart('item1')">
-    <p>Simple Navy Blue T-Shirt</p>
-    <p>Price - $95</p>
-    <input type="hidden" id="item1_name" value="Simple Navy Blue T-Shirt">
-    <input type="hidden" id="item1_price" value="$95">
+    <p>Bomb</p>
+    <p>Price - $200</p>
+    <input type="hidden" id="item1_name" value="Bomb">
+    <input type="hidden" id="item1_price" value="$200">
   </div>
 
   <div class="items" id="item2">
