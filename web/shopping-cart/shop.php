@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Browse | Shopping Cart | CTE341</title>
+    <title>Shop | Shopping Cart | CTE341</title>
 
     <link rel="stylesheet" href="css/shop.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
