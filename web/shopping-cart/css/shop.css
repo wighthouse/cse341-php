@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 * {
     box-sizing: border-box;
-    font-family: Raleway;
+    font-family: Roboto;
     color: #777;
 }
 
@@ -22,7 +23,7 @@ body {
 }
 
 .section-header {
-    font-family: "Metal Mania";
+    font-family: "Roboto", sans-serif;
     font-weight: normal;
     color: #333;
     text-align: center;
@@ -44,7 +45,7 @@ body {
     color: #333;
 }
 
-.products {
+.product-display {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
