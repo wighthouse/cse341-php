@@ -14,10 +14,10 @@
 <body>
 <main>
 <section class="container content-section">
-<p id="cart_button" onclick="show_cart();">
+<div id="cart_button" onclick="show_cart();">
   <img src="images/products/cart-icon-823x669.png">
   <input type="button" id="total_items" value="">
-</p>
+</div>
 
 <div id="mycart">
 </div>
