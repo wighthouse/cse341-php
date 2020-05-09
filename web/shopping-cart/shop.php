@@ -26,7 +26,7 @@
                 </div>
                 <div class="product">
                     <span class="product-title">Trap</span>
-                    <img class="product-image" src="trap.jpg">
+                    <img class="product-image" src="images/products/trap.jpg">
                     <div class="product-details">
                         <span class="product-price">$24.99</span>
                         <button class="btn btn-primary product-button"type="button">ADD TO CART</button>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="product">
                     <span class="product-title">TnT</span>
-                    <img class="product-image" src="tnt.png">
+                    <img class="product-image" src="images/products/tnt.png">
                     <div class="product-details">
                         <span class="product-price">$49.99</span>
                         <button class="btn btn-primary product-button" type="button">ADD TO CART</button>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="product">
                     <span class="product-title">Anvil</span>
-                    <img class="product-image" src="anvil.png">
+                    <img class="product-image" src="images/products/anvil.png">
                     <div class="product-details">
                         <span class="product-price">$19.99</span>
                         <button class="btn btn-primary product-button" type="button">ADD TO CART</button>
