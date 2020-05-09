@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
 <body>
 <main>
 <div id="product-display">
-<h2 class="title">Products</h2>
+<h2 class="title" a href="shop.php">Our Products</h2>
 </div>
 <p id="cart_button" onclick="show_cart();">
   <img src="images/products/cart-icon-823x669.png">
