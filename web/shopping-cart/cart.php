@@ -1,5 +1,5 @@
 <?php
-//This is the cart controller 
+
 
 session_start();
 if(isset($_POST['total_cart_items']))

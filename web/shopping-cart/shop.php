@@ -14,6 +14,13 @@
 <body>
 <main>
 <section class="container content-section">
+<p id="cart_button" onclick="show_cart();">
+  <img src="images/products/cart-icon-823x669.png">
+  <input type="button" id="total_items" value="">
+</p>
+
+<div id="mycart">
+</div>
             <h2 class="section-header">Our Products</h2>
             <div class="product-display">
                 <div class="product">
