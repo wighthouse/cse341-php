@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $.ajax({
         type: 'post',
-        url: 'store_items.php',
+        url: 'cart.php',
         data: {
             total_cart_items: "totalitems"
         },
@@ -21,7 +21,7 @@ function cart(id) {
 
     $.ajax({
         type: 'post',
-        url: 'store_items.php',
+        url: 'cart.php',
         data: {
             item_src: img_src,
             item_name: name,
@@ -37,7 +37,7 @@ function cart(id) {
 function show_cart() {
     $.ajax({
         type: 'post',
-        url: 'store_items.php',
+        url: 'cart.php',
         data: {
             showcart: "cart"
         },
