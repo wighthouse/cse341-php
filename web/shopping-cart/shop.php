@@ -6,7 +6,7 @@
 
     <title>Browse | Shopping Cart | CTE341</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/shop.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
 
 </head>
