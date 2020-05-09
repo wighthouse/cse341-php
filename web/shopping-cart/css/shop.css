@@ -23,8 +23,9 @@ body {
 }
 
 #cart_button {
+    float: right;
     margin-top: 20px;
-    margin-left: 80px;
+    margin-right: 80px;
     cursor: pointer;
 }
 
