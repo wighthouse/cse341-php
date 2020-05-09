@@ -17,7 +17,7 @@
 <h2 class="title">Products</h2>
 </div>
 <p id="cart_button" onclick="show_cart();">
-  <img src="images/products/trap_tn.jpg">
+  <img src="images/products/cart-icon-823x669.png">
   <input type="button" id="total_items" value="">
 </p>
 
