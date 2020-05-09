@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 1.5em;
 }
@@ -28,6 +28,20 @@ body {
     color: #333;
     text-align: center;
     font-size: 2.5em;
+}
+
+.product {
+    margin: 30px;
+}
+
+.product-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .product-image {
