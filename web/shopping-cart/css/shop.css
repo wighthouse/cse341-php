@@ -11,8 +11,26 @@ body {
     min-height: 100%;
 }
 
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
 .product-image {
-    height: 250px;
+    height: 200px;
 }
 
 .product-details {
