@@ -18,31 +18,31 @@
             <div class="product-display">
                 <div class="product">
                     <span class="product-title">Bomb</span>
-                    <img class="product-image" src="images/products/bomb.jpg">
+                    <img class="product-image" src="images/products/bomb.png">
                     <div class="product-details">
                         <span class="product-price">$199.99</span>
                         <button class="btn btn-primary product-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="product">
-                    <span class="product-title">Bomb 2</span>
-                    <img class="product-image" src="Images/Album 2.png">
+                    <span class="product-title">Trap</span>
+                    <img class="product-image" src="trap.jpg">
                     <div class="product-details">
                         <span class="product-price">$24.99</span>
                         <button class="btn btn-primary product-button"type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="product">
-                    <span class="product-title">Album 3</span>
-                    <img class="product-image" src="Images/Album 3.png">
+                    <span class="product-title">TnT</span>
+                    <img class="product-image" src="tnt.png">
                     <div class="product-details">
-                        <span class="product-price">$9.99</span>
+                        <span class="product-price">$49.99</span>
                         <button class="btn btn-primary product-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="product">
-                    <span class="product-title">Album 4</span>
-                    <img class="product-image" src="Images/Album 4.png">
+                    <span class="product-title">Anvil</span>
+                    <img class="product-image" src="anvil.png">
                     <div class="product-details">
                         <span class="product-price">$19.99</span>
                         <button class="btn btn-primary product-button" type="button">ADD TO CART</button>
