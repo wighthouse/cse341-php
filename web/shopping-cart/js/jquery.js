@@ -1,3 +1,5 @@
+console.log
+
 $(document).ready(function() {
 
     $.ajax({

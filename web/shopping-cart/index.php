@@ -17,14 +17,12 @@
 <h2 class="title">Products</h2>
 </div>
 <p id="cart_button" onclick="show_cart();">
-  <img src="cart_icon.png">
+  <img src="images/products/trap_tn.jpg">
   <input type="button" id="total_items" value="">
 </p>
 
 <div id="mycart">
 </div>
-
-<h1>Simple Add To Cart System Using jQuery,Ajax And PHP</h1>
 
 <div id="item_div">
 
