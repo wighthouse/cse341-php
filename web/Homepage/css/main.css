@@ -196,5 +196,5 @@ footer {
 
 .assignments ul li a:hover {
     color: #50006d;
-    text-size-adjust: 125%;
+    font-size: 150%;
 }
