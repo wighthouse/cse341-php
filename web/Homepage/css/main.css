@@ -183,11 +183,11 @@ footer {
 .assignments ul {
     margin-top: 20px;
     list-style: none;
-    text-align: left;
 }
 
 .assignments ul li {
     line-height: 1.5rem;
+    text-align: left;
 }
 
 .assignments ul li a {
