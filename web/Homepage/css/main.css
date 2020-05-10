@@ -175,7 +175,7 @@ footer {
 }
 
 .assignments {
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
 }
@@ -186,7 +186,7 @@ footer {
 }
 
 .assignments ul li {
-    line-height: 1.5rem;
+    line-height: 2rem;
     text-align: left;
 }
 
