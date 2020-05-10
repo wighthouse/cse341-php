@@ -192,9 +192,10 @@ footer {
 
 .assignments ul li a {
     text-decoration: none;
+    color: #363636;
 }
 
 .assignments ul li a:hover {
     color: #50006d;
-    font-size: 150%;
+    font-size: 1.5rem;
 }
