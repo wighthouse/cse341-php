@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +17,9 @@
 <body>
 <main>
 <section class="container content-section">
-<div id="cart_button" onclick="show_cart();">
+<div id="cart_button" ><a href="https://murmuring-coast-84451.herokuapp.com/shopping-cart/cart.php">
   <img src="images/products/cart-icon-823x669.png">
-  <input type="button" id="total_items" value="">
+  <input type="button" id="total_items" value=""></a>
 </div>
 
 <div id="mycart">
