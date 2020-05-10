@@ -57,9 +57,9 @@
                 </div>
             </div>
         </section>
-        <section class="container content-section">
-
+       
 </main>
 <script type="text/javascript" src="js/shopping-cart.js"></script>
 
 </body>
+</html>

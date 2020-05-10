@@ -28,3 +28,9 @@
             </div>
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
+
+        </main>
+<script type="text/javascript" src="js/shopping-cart.js"></script>
+
+</body>
+</html>
