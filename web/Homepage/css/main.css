@@ -173,3 +173,14 @@ footer {
     color: #ffffff;
     text-align: center;
 }
+
+.assignments {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.assignments ul {
+    list-style: none;
+    line-height: 1.5rem;
+}

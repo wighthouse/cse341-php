@@ -21,7 +21,7 @@
             <div class="home-info">
                 <div class="assignments">
                     <ul>
-                        <li><a href="https://murmuring-coast-84451.herokuapp.com/shopping-cart/cart.php">Wk 3: Shopping Cart</a></li>
+                        <li><a href="https://murmuring-coast-84451.herokuapp.com/shopping-cart/shop.php">Wk 3: Shopping Cart</a></li>
                         <li>Wk 4: DB Setup</li>
                         <li>Wk 5: DB Access</li>
                         <li>Wk 6: DB Update</li>
