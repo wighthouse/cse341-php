@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +29,7 @@
 
 <div id="item_div">
 
-  <div class="items" id="item1">
+  <form class="items" id="item1" action="#" onclick="return addToCart(this);">
     <img src="images/products/bomb.png">
     <input type="button" value="Add To CART" onclick="cart('item1')">
     <p>Bomb</p>
