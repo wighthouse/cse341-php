@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <?php include '/Homepage/php/header.php'; ?>
+        <?php include './Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -59,6 +59,7 @@ echo '<h3>Example 3</h3>';
 $statement = $db->query('SELECT username, password FROM note_user');
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 print_r($results);
+echo '<br>';
 
 foreach ($results as $row)
 {
@@ -78,6 +79,12 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 echo $rows;
 
+foreach ($rows as $row)
+{
+  echo 'user: ' . $row['username'];
+  echo ' password: ' . $row['password'];
+  echo '<br/>';
+}
 
 
 
@@ -88,7 +95,7 @@ echo $rows;
     </main>
 
     <footer>
-        <?php include '/Homepage/php/footer.php'; ?>
+        <?php include './Homepage/php/footer.php'; ?>
     </footer>
 </body>
 
