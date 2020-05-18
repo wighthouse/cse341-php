@@ -6,7 +6,7 @@
 
     <title>CTE341 | Web Backend Development II | Assignments</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/Homepage/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
 
 </head>
@@ -47,24 +47,29 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
   echo '<br/>';
 }
 
+echo '<h3>Example 2</h3>';
+
 $statement = $db->query('SELECT username, password FROM note_user');
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
   echo 'user: ' . $row['username'] . ' password: ' . $row['password'] . '<br/>';
 }
+echo '<h3>Example 3</h3>';
+
+$statement = $db->query('SELECT username, password FROM note_user');
+$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+echo $results;
 
 echo '<h2>Next Section</h2>';
 
-$statement = $db->query('SELECT username, password FROM note_user');
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-while ($row = $results)
-{
-  echo 'user: ' . $row['username'] . ' password: ' . $row['password'] . '<br/>';
+echo $rows;
 
-}
-$statement = $db->query('SELECT username, password FROM note_user');
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
 
