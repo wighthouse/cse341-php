@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <?php include 'php/header.php'; ?>
+        <?php include '/Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -58,7 +58,7 @@ echo '<h3>Example 3</h3>';
 
 $statement = $db->query('SELECT username, password FROM note_user');
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-echo $results;
+print_r($results);
 
 echo '<h2>Next Section</h2>';
 
@@ -80,7 +80,7 @@ echo $rows;
     </main>
 
     <footer>
-        <?php include 'php/footer.php'; ?>
+        <?php include '/Homepage/php/footer.php'; ?>
     </footer>
 </body>
 
