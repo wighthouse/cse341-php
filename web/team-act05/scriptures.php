@@ -60,6 +60,14 @@ $statement = $db->query('SELECT username, password FROM note_user');
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 print_r($results);
 
+foreach ($results as $row)
+{
+  echo 'user: ' . $row['username'];
+  echo ' password: ' . $row['password'];
+  echo '<br/>';
+}
+
+
 echo '<h2>Next Section</h2>';
 
 $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
