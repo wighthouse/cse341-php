@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <?php include './Homepage/php/header.php'; ?>
+        <?php include 'Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -71,13 +71,13 @@ foreach ($results as $row)
 
 echo '<h2>Next Section</h2>';
 
-$stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
+$stmt = $db->prepare('SELECT * FROM note_user WHERE id=:id AND name=:name');
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo $rows;
+print_r($rows);
 
 foreach ($rows as $row)
 {
@@ -95,7 +95,7 @@ foreach ($rows as $row)
     </main>
 
     <footer>
-        <?php include './Homepage/php/footer.php'; ?>
+        <?php include 'Homepage/php/footer.php'; ?>
     </footer>
 </body>
 
