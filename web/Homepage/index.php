@@ -35,7 +35,7 @@
                             <img src="images/kenya-hair-touching.jpg" alt="Maretta in Kenya">
                             <figcaption>
                                 <p>Shamba Foundation</p>
-                                <p>I am part of this organization the seeks to Nourish, Educate, and Empower the children of Kenya. </p>
+                                <p>I am part of this organization that seeks to Nourish, Educate, and Empower the children of Kenya. </p>
                             </figcaption>
                         </figure>
                     </div>
