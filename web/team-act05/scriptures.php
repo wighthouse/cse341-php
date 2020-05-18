@@ -40,12 +40,35 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-foreach ($db->query('SELECT username, password FROM note_user') as $row)
+foreach ($db->query('SELECT username, password FROM scriptures') as $row)
 {
   echo 'user: ' . $row['username'];
   echo ' password: ' . $row['password'];
   echo '<br/>';
 }
+
+$statement = $db->query('SELECT username, password FROM note_user');
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+  echo 'user: ' . $row['username'] . ' password: ' . $row['password'] . '<br/>';
+}
+
+echo '<h2>Next Section</h2>';
+
+$statement = $db->query('SELECT username, password FROM note_user');
+$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+while ($row = $results)
+{
+  echo 'user: ' . $row['username'] . ' password: ' . $row['password'] . '<br/>';
+
+}
+$statement = $db->query('SELECT username, password FROM note_user');
+$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
 ?>
         </div>
 
