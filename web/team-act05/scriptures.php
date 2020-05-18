@@ -71,9 +71,9 @@ foreach ($results as $row)
 
 echo '<h2>Next Section</h2>';
 
-$stmt = $db->prepare('SELECT * FROM note_user WHERE id=:id AND name=:name');
-$stmt->bindValue(':id', $id, PDO::PARAM_INT);
-$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+$stmt = $db->prepare('SELECT * FROM note_user WHERE username=:username AND password=:password');
+$stmt->bindValue(':username', $username, PDO::PARAM_STR);
+$stmt->bindValue(':password', $password, PDO::PARAM_STR);
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
