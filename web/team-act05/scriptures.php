@@ -40,7 +40,7 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-foreach ($db->query('SELECT * FROM sciptures') as $row)
+foreach ($db->query('SELECT * FROM scriptures') as $row)
 {
   echo '<strong>' . $row['book'] .' ' . $row['chapter'] . $row['verse'] . '</strong>';
   echo '"' . $row['content'] .'"';
