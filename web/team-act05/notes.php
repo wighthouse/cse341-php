@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>CTE341 | Web Backend Development II | Scripture Resources</title>
+    <title>CTE341 | Web Backend Development II | Notes Tutorial</title>
 
     <link rel="stylesheet" href="/Homepage/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Scripture Resources</h2>
+            <h2 class="page-title">Notes Tutorial</h2>
 
             <?php   try
 {
@@ -40,10 +40,10 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-foreach ($db->query('SELECT * FROM sciptures') as $row)
+foreach ($db->query('SELECT username, password FROM note_user') as $row)
 {
-  echo '<strong>' . $row['book'] .' ' . $row['chapter'] . $row['verse'] . '</strong>';
-  echo '"' . $row['content'] .'"';
+  echo 'user: ' . $row['username'];
+  echo ' password: ' . $row['password'];
   echo '<br/>';
 }
 
@@ -68,6 +68,23 @@ foreach ($results as $row)
   echo '<br/>';
 }
 
+
+// echo '<h2>Next Section</h2>';
+
+// $stmt = $db->prepare('SELECT * FROM note_user WHERE username=:username AND password=:password');
+// $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+// $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+// $stmt->execute();
+// $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// echo var_dump($rows);
+
+// foreach ($rows as $row)
+// {
+//   echo 'user: ' . $row['username'];
+//   echo ' password: ' . $row['password'];
+//   echo '<br/>';
+// }
 
 
 
