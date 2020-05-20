@@ -1,6 +1,6 @@
 <?php 
     function search() {
-        echo "<form method='post'>";
+        echo "<form method='post' action='scrip-results.php'>";
         echo "<input type='text' name='bookToFind'>";
         echo "<button type='submit'>Search</button>";
         echo "</form>";
