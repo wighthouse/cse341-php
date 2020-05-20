@@ -34,8 +34,8 @@
 
     function searchQuery($name, $db) {
    // $db=dbConnection();    
-    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book ILIKE :name');
-    $name= '%$name}%';
+    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book = :name');
+    //$name= '$name';
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
     $book = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -78,6 +78,15 @@ if(isset($_POST['bookToFind'])) {
         <div class="main-container">
             <h2 class="page-title">Scripture Resources Results</h2>
          
+            <?php  
+   foreach ($books as $row)
+   {
+     echo '<strong>' . $row['book'] .' ' . $row['chapter'] .':' . $row['verse'] . '</strong>';
+     echo ' - "' . $row['content'] .'"';
+     echo '<br/><br/>';
+   }
+
+?>
         </div>
            
 
