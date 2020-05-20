@@ -47,9 +47,9 @@ if(isset($_POST['bookToFind'])) {
     // Validate & sanitize the input
     $searchText = validateInput($_POST['bookToFind']);
     // Now run the query to find the text in the database, and then save the results as a variable
-    $books = searchQuery($searchText);
+   // $books = searchQuery($searchText);
   // Change the method name
-  print_r($books);
+ // print_r($books);
   
 
   }
