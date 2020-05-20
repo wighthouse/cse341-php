@@ -1,3 +1,11 @@
+<?php 
+    function search() {
+        echo "<form method='post'>";
+        echo "<input type='text' name='bookToFind'>";
+        echo "<button type='submit'>Search</button>";
+        echo "</form>";
+    }
+?>
 <!doctype html>
 <html lang="en">
 
@@ -47,38 +55,14 @@ foreach ($db->query('SELECT * FROM scriptures') as $row)
   echo '<br/><br/>';
 }
 
-echo '<h3>Example 2</h3>';
-
-$statement = $db->query('SELECT username, password FROM note_user');
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-  echo 'user: ' . $row['username'] . ' password: ' . $row['password'] . '<br/>';
-}
-echo '<h3>Example 3</h3>';
-
-$statement = $db->query('SELECT username, password FROM note_user');
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
-print_r($results);
-echo '<br>';
-
-foreach ($results as $row)
-{
-  echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
-
-
-
-
-
 ?>
         </div>
+            <?php search(); ?>
 
     </main>
 
     <footer>
-        <?php include 'Homepage/php/footer.php'; ?>
+    
     </footer>
 </body>
 
