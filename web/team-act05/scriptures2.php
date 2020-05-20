@@ -51,15 +51,7 @@
         <div class="main-container">
             <h2 class="page-title">Scripture Resources</h2>
 
-            <?php  
-   foreach ($db->query('SELECT * FROM scriptures') as $row)
-   {
-     echo '<strong>' . $row['book'] .' ' . $row['chapter'] .':' . $row['verse'] . '</strong>';
-     echo ' - "' . $row['content'] .'"';
-     echo '<br/><br/>';
-   }
-
-?>
+          
         </div>
             <?php search(); ?>
 
