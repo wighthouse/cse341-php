@@ -1,5 +1,5 @@
 <?php
-    function dbConnection(){
+    
     try
     {
       $dbUrl = getenv('DATABASE_URL');
@@ -15,7 +15,7 @@
       $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
     
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      return $db;
+     
     }
     catch (PDOException $ex)
         {
@@ -23,7 +23,7 @@
       die();
     }
 
-    }
+   
 
     function validateInput($data){
         $data = trim($data);
@@ -32,8 +32,8 @@
         return $data;
     }
 
-    function searchQuery($name) {
-    $db=dbConnection();    
+    function searchQuery($name, $db) {
+   // $db=dbConnection();    
     $stmt = $db->prepare('SELECT * FROM scriptures WHERE book = :name');
     //$name= "%$name}%";
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -49,7 +49,7 @@ if(isset($_POST['bookToFind'])) {
     // Validate & sanitize the input
     $searchText = validateInput($_POST['bookToFind']);
     // Now run the query to find the text in the database, and then save the results as a variable
-    $books = searchQuery($searchText);
+    $books = searchQuery($searchText, $db);
   // Change the method name
   print_r($books);
   
