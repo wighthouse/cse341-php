@@ -1,4 +1,28 @@
 <?php
+    function dbConnection(){
+    try
+    {
+      $dbUrl = getenv('DATABASE_URL');
+    
+      $dbOpts = parse_url($dbUrl);
+    
+      $dbHost = $dbOpts["host"];
+      $dbPort = $dbOpts["port"];
+      $dbUser = $dbOpts["user"];
+      $dbPassword = $dbOpts["pass"];
+      $dbName = ltrim($dbOpts["path"],'/');
+    
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch (PDOException $ex)
+    {
+      echo 'Error!: ' . $ex->getMessage();
+      die();
+    }
+    }
+
     function validateInput($data){
         $data = trim($data);
         $data = stripslashes($data);
@@ -6,15 +30,28 @@
         return $data;
     }
 
+    function searchQuery($name) {
+    $db=dbConnection();    
+    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book ILIKE :name');
+    $name= "%{$name}%";
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+    $stmt->execute();
+    $book = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $book;
+    }
+
     // If the page loads as a POST request, look for this variable, and if it is set
 if(isset($_POST['bookToFind'])) {
     // This is just for testing to make sure we have the correct text
-    echo "<h1>" . $_POST['bookToFind'] . "</h1>";
+    //echo "<h1>" . $_POST['bookToFind'] . "</h1>";
     // Validate & sanitize the input
     $searchText = validateInput($_POST['bookToFind']);
     // Now run the query to find the text in the database, and then save the results as a variable
-   // $books = week5query($searchText);
+    $books = searchQuery($searchText);
   // Change the method name
+  print_r($books);
+  
+
   }
 
 ?>
