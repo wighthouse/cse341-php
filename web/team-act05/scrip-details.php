@@ -76,13 +76,13 @@ if(isset($_POST['bookToFind'])) {
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Scripture Resources Results</h2>
+            <h2 class="page-title">Scripture Details</h2>
          
             <?php  
    foreach ($books as $row)
    {
-     echo "<a href='scrip-details.php?id={$row['id']}'<strong>" . $row['book'] .' ' . $row['chapter'] .':' . $row['verse'] . '</strong></a>';
-     
+     echo '<strong>' . $row['book'] .' ' . $row['chapter'] .':' . $row['verse'] . '</strong>';
+     echo ' - "' . $row['content'] .'"';
      echo '<br/><br/>';
    }
 
