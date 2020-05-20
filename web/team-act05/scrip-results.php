@@ -32,7 +32,7 @@
 
     function searchQuery($name) {
     $db=dbConnection();    
-    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book ILIKE :name');
+    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book = :name');
     //$name= "%$name}%";
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
