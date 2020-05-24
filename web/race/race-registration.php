@@ -45,7 +45,7 @@
 
 <body>
     <header>
-        <?php include '/web/Homepage/php/header.php'; ?>
+        <?php include '../Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -65,7 +65,7 @@
     </main>
 
     <footer>
-    
+    <?php include '../Homepage/php/footer.php';?>
     </footer>
 </body>
 
