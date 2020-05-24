@@ -1,5 +1,5 @@
 <?php 
-   require_once 'functions.php';
+   include_once 'functions.php';
 //    get_db();
     $events= getEvents();    
 ?>
