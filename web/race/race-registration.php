@@ -31,9 +31,9 @@
         <form method='post' action='race-query-results.php'>
         <select id='event_id' name='event_id'>
         <option value='1'>1k</option>
-        <option value='1'>5k</option>
-        <option value='1'>10k</option>
-        <button type='submit'>Search</button>
+        <option value='2'>5k</option>
+        <option value='3'>10k</option>
+        <input type='submit'>Search</button>
         </form>
         
 
