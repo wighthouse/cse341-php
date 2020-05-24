@@ -45,7 +45,7 @@
 
 <body>
     <header>
-        <?php include 'web/Homepage/php/header.php'; ?>
+        <?php include '/web/Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
