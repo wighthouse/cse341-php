@@ -33,7 +33,7 @@
         <option value='1'>1k</option>
         <option value='2'>5k</option>
         <option value='3'>10k</option>
-        <input type='submit'>Search</button>
+        <input type='submit'>
         </form>
         
 
