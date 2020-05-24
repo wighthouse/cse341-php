@@ -6,7 +6,7 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="assignments.php">Assignments</a></li>
-                    <li><a href="web\race\race-registration.php">Project</a></li>
+                    <li><a href="/race/race-registration.php">Project</a></li>
 
 
                 </ul>
