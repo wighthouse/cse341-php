@@ -34,8 +34,8 @@
 
     function searchQuery($eventId, $db) {
    // $db=dbConnection();    
-    $stmt = $db->prepare('SELECT * FROM participant WHERE event_id = :event_id');
-    //$name= '$name';
+    $stmt = $db->prepare('SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id JOIN event e ON p.event_id=e.id  WHERE event_id = :event_id');
+    
     $stmt->bindValue(':event_id', $eventId, PDO::PARAM_INT);
     $stmt->execute();
     $racers = $stmt->fetchAll(PDO::FETCH_ASSOC);
