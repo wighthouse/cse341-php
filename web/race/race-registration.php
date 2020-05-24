@@ -1,34 +1,7 @@
 <?php 
-    function search() {
-        echo "<form method='post' action='race-query-results.php'>";
-        echo "<input type='text' name='eventParticipants'>";
-        echo "<button type='submit'>Search</button>";
-        echo "</form>";
-    }
-
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-    
-      $dbOpts = parse_url($dbUrl);
-    
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-    
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (PDOException $ex)
-    {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
-    }
- 
-    
+   require_once 'functions.php';
+   get_db();
+   $events= getEvents();    
 ?>
 <!doctype html>
 <html lang="en">
@@ -54,13 +27,11 @@
           
         </div>
         <h3>Search for Race Participants by event.</h3>
-        <ul>
-            <li>1 = 1k</li>
-            <li>2 = 5k</li>
-            <li>3 = 10k</li>
-
-        </ul>
-            <?php search(); ?>
+        
+        <form method='post' action='race-query-results.php'>
+        <?php echo $eventList;?>
+        <button type='submit'>Search</button>
+        </form>
 
     </main>
 
