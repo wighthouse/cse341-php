@@ -64,4 +64,4 @@ foreach ($events as $event) {
   $eventList .= "<option value='$event[event_id]'>$event[event_name]</option>";
 }
 $eventList .= "</select>";
-// echo $eventList;
+echo $eventList;
