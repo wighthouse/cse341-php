@@ -78,10 +78,11 @@ if(isset($_POST['eventParticipants'])) {
         <div class="main-container">
             <h2 class="page-title">Race Query Results</h2>
          
-            <?php  
+            <?php 
+     echo '<h3>Participants</h3><br/>';        
    foreach ($racers as $row)
    {
-     echo "<'<strong>" . $row['participant_first_name'] .' ' . $row['participant_last_name'] .'</strong>>';
+     echo "<strong>" . $row['participant_first_name'] .' ' . $row['participant_last_name'] .'</strong>';
      
      echo '<br/><br/>';
    }
