@@ -43,11 +43,11 @@
     }
 
     // If the page loads as a POST request, look for this variable, and if it is set
-if(isset($_POST['eventParticipants'])) {
+if(isset($_POST['event_id'])) {
     // This is just for testing to make sure we have the correct text
     //echo "<h1>" . $_POST['bookToFind'] . "</h1>";
     // Validate & sanitize the input
-    $searchRacers = validateInput($_POST['eventParticipants']);
+    $searchRacers = validateInput($_POST['event_id']);
     // Now run the query to find the text in the database, and then save the results as a variable
     $racers = searchQuery($searchRacers, $db);
   // Change the method name
