@@ -72,7 +72,7 @@ if(isset($_POST['eventParticipants'])) {
 
 <body>
     <header>
-        <?php include '../Homepage\php\header.php'; ?>
+        <?php include '../Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
