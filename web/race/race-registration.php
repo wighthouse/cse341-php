@@ -45,7 +45,7 @@
 
 <body>
     <header>
-        <?php include 'Homepage/php/header.php'; ?>
+        <?php include 'web/Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -53,6 +53,13 @@
 
           
         </div>
+        <h3>Search for Race Participants by event.</h3>
+        <ul>
+            <li>1 = 1k</li>
+            <li>2 = 5k</li>
+            <li>3 = 10k</li>
+
+        </ul>
             <?php search(); ?>
 
     </main>
