@@ -54,12 +54,12 @@
           
         </div>
         <h3>Search for Race Participants by event.</h3>
-        <ol>
-            <li>= 1k</li>
-            <li>= 5k</li>
-            <li>= 10k</li>
+        <ul>
+            <li>1 = 1k</li>
+            <li>2 = 5k</li>
+            <li>3 = 10k</li>
 
-        </ol>
+        </ul>
             <?php search(); ?>
 
     </main>

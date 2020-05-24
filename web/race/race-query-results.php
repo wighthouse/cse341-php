@@ -51,7 +51,7 @@ if(isset($_POST['eventParticipants'])) {
     // Now run the query to find the text in the database, and then save the results as a variable
     $racers = searchQuery($searchRacers, $db);
   // Change the method name
-  print_r($racers);
+ // print_r($racers);
   
 
   }
