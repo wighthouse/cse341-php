@@ -1,7 +1,7 @@
 <?php 
    include_once 'functions.php';
-   get_db();
-   $events= getEvents();    
+//    get_db();
+//    $events= getEvents();    
 ?>
 <!doctype html>
 <html lang="en">
