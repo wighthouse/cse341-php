@@ -1,6 +1,5 @@
 <?php
-function get_db() {
-	$db = NULL;
+
 try
     {
       $dbUrl = getenv('DATABASE_URL');
@@ -22,8 +21,8 @@ try
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-    return $db;
-}
+    
+
 
 
 
@@ -31,7 +30,7 @@ try
 
 function getEvents(){
     // Create a connection object from the connection function
-    $db = get_db(); 
+    //$db = get_db(); 
     // The SQL statement to be used with the database 
     $sql = 'SELECT event_name, event_id FROM public.event ORDER BY event_name ASC'; 
     // The next line creates the prepared statement using the db connection      
