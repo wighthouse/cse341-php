@@ -1,7 +1,7 @@
 <?php 
    include_once 'functions.php';
 //    get_db();
-  //$events= getEvents();    
+//  $events= getEvents();    
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,9 +29,13 @@
         <h3>Search for Race Participants by event.</h3>
         
         <form method='post' action='race-query-results.php'>
-        <?php echo $eventList;?>
+        <select id='event_id' name='event_id'>
+        <option value='1'>1k</option>
+        <option value='1'>5k</option>
+        <option value='1'>10k</option>
         <button type='submit'>Search</button>
         </form>
+        
 
     </main>
 
