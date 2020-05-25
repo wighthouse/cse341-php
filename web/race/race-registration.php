@@ -1,7 +1,8 @@
 <?php 
-   include_once 'functions.php';
-//    get_db();
-//  $events= getEvents();    
+   require('functions.php');
+   $db = get_db();
+   
+     
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,7 +36,7 @@
         <option value='3'>10k</option>
         <input type='submit'>
         </form>
-        
+        <?php echo search();?>
 
     </main>
 
