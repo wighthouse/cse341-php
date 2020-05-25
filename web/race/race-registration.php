@@ -36,7 +36,9 @@
         <option value='3'>10k</option>
         <input type='submit'>
         </form>
-        <?php echo search();?>
+        <?php 
+        $searchBox = search();
+        echo $searchBox;?>
 
     </main>
 
