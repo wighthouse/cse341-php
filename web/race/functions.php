@@ -66,7 +66,7 @@ function buildEventList($events){
     echo "<form method='post' action='race-query-results.php'>";
     echo $eventList;
    
-    echo "<input type='submit' value='search'>";
+    echo "<input type='submit' value='Search'>";
     echo "</form>";
 }
 

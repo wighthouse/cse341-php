@@ -29,13 +29,6 @@ print_r($events);
         </div>
         <h3>Search for Race Participants by event.</h3>
         
-        <form method='post' action='race-query-results.php'>
-        <select id='event_id' name='event_id'>
-        <option value='1'>1k</option>
-        <option value='2'>5k</option>
-        <option value='3'>10k</option>
-        <input type='submit'>
-        </form>
         <?php 
         $searchBox = search();
         echo $searchBox;
