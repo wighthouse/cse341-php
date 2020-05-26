@@ -33,7 +33,7 @@ function getEvents(){
     // Create a connection object from the connection function
     $db = get_db(); 
     // The SQL statement to be used with the database 
-    $sql = 'SELECT event_name, event_id FROM public.event ORDER BY event_name ASC'; 
+    $sql = 'SELECT event_name, id FROM public.event ORDER BY event_name ASC'; 
     // The next line creates the prepared statement using the db connection      
     $stmt = $db->prepare($sql);
     // The next line runs the prepared statement 
@@ -53,7 +53,7 @@ function buildEventList($events){
   $eventList = "<select id='event_id' name='event_id'>";
   $eventList .= "<option value='' selected disabled>Select an Event</option>";
   foreach ($events as $event) {
-    $eventList .= "<option value='$event[event_id]'>$event[event_name]</option>";
+    $eventList .= "<option value='$event[id]'>$event[event_name]</option>";
   }
   $eventList .= "</select>";
   return $eventList;

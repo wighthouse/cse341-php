@@ -1,8 +1,8 @@
 <?php 
   require_once('functions.php');
    $db = get_db();
-  //$events= getEvents();
-//print_r($events); 
+  $events= getEvents();
+print_r($events); 
 ?>
 <!doctype html>
 <html lang="en">
