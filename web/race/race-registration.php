@@ -1,5 +1,5 @@
 <?php 
-   require('functions.php');
+  include('functions.php');
    $db = get_db();
    $events= getEvents();
 print_r($events); 
