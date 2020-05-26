@@ -32,7 +32,7 @@ print_r($events);
         <?php 
         $searchBox = search();
         echo $searchBox;
-        print_r($events)?>
+        ?>
 
     </main>
 
