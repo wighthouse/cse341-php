@@ -1,6 +1,6 @@
 <?php 
-  include('functions.php');
-   $db = get_db();
+  require_once('functions.php');
+  // $db = get_db();
    $events= getEvents();
 print_r($events); 
 ?>
