@@ -1,8 +1,6 @@
 <?php 
   require_once('functions.php');
    $db = get_db();
- // $events= getEvents();
- 
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,7 +21,7 @@
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Race Partipants Search</h2>
+            <h2 class="page-title">Race Participants Search</h2>
 
           
         </div>
