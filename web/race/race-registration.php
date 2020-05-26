@@ -1,7 +1,7 @@
 <?php 
   require_once('functions.php');
-  // $db = get_db();
-   $events= getEvents();
+   $db = get_db();
+  // $events= getEvents();
 print_r($events); 
 ?>
 <!doctype html>
