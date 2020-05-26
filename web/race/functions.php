@@ -42,7 +42,7 @@ function getEvents(){
     // stores it as an array in the $events variable 
     $events = $stmt->fetchAll(); 
     // The next line closes the interaction with the database 
-    $stmt->closeCursor(); 
+    $stmt->closeCursor(PDO::FETCH_ASSOC); 
     // The next line sends the array of data back to where the function 
     // was called (this should be the controller) 
     return $events;
