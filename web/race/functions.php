@@ -48,6 +48,18 @@ function getEvents(){
     return $events;
    }
 
+//Build the drop-down event select list
+function buildEventList($events){
+  $eventList = "<select id='event_id' name='event_id'>";
+  $eventList .= "<option value='' selected disabled>Select an Event</option>";
+  foreach ($events as $event) {
+    $eventList .= "<option value='$event[event_id]'>$event[event_name]</option>";
+  }
+  $eventList .= "</select>";
+  return $eventList;
+  }
+  //echo $eventList;
+
    function search() {
     $events= getEvents();
     $eventList = buildEventList($events);
@@ -58,15 +70,4 @@ function getEvents(){
     echo "</form>";
 }
 
-print_r($events);
-//Build the drop-down event select list
-function buildEventList($events){
-$eventList = "<select id='event_id' name='event_id'>";
-$eventList .= "<option value='' selected disabled>Select an Event</option>";
-foreach ($events as $event) {
-  $eventList .= "<option value='$event[event_id]'>$event[event_name]</option>";
-}
-$eventList .= "</select>";
-return $eventList;
-}
-//echo $eventList;
+

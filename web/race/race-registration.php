@@ -2,7 +2,7 @@
    require('functions.php');
    $db = get_db();
    $events= getEvents();
-    print_r($events); 
+print_r($events); 
 ?>
 <!doctype html>
 <html lang="en">
