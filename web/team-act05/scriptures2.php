@@ -104,7 +104,7 @@
         <label class='above'>Text<input type='textarea' name='content'>
 <?php foreach ($topics as $topic) {
     //  $topics=getTopics();
-        echo "<label class='above'>{$topic['topic']}<input type='checkbox' value={$topic['id']} name={$topic['topic']}></label>";
+        echo "<label class='above' id='chkTopics{$topic['id']}'>{$topic['topic']}<input type='checkbox' value={$topic['id']} name='chkTopics[]'></label>";
 }?>
         <button type='submit'>Add Scripture</button>
         </form>   
