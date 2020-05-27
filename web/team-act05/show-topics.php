@@ -80,7 +80,7 @@ try
 		echo 'Topics: ';
 
 		// get the topics now for this scripture
-		$stmtTopics = $db->prepare('SELECT name FROM topics t'
+		$stmtTopics = $db->prepare('SELECT topic FROM topics t'
 			. ' INNER JOIN scripture_topic st ON st.topic_id = t.id'
 			. ' WHERE st.scripture_id = :scripture_id');
 
