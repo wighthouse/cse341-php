@@ -25,6 +25,7 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
+    return $db;
     }
    
 
@@ -105,7 +106,7 @@ die(); // we always include a die after redirects. In this case, there would be 
 
     <title>CTE341 | Web Backend Development II | Scripture Details</title>
 
-    <link rel="stylesheet" href="/Homepage/css/main.css">
+    <link rel="stylesheet" href="../Homepage/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
 
 </head>
@@ -116,17 +117,9 @@ die(); // we always include a die after redirects. In this case, there would be 
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Scripture Details</h2>
+            <h2 class="page-title">Insert Scriptures</h2>
          
-            <?php  
-   foreach ($books as $row)
-   {
-     echo '<strong>' . $row['book'] .' ' . $row['chapter'] .':' . $row['verse'] . '</strong>';
-     echo ' - "' . $row['content'] .'"';
-     echo '<br/><br/>';
-   }
-
-?>
+       
         </div>
            
 
