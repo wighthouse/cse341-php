@@ -44,7 +44,7 @@
 
 <body>
     <header>
-        <?php include 'Homepage/php/header.php'; ?>
+        <?php include '../Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -69,7 +69,7 @@ try
 	// prepare the statement
 	$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scriptures');
 	$statement->execute();
-print_r($statement);
+
 	// Go through each result
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	{
@@ -87,11 +87,11 @@ print_r($statement);
 		$stmtTopics->bindValue(':scripture_id', $row['id']);
 		$stmtTopics->execute();
 
-		// Go through each topic in the result
-		while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
-		{
-			echo $topicRow['topic'] . ' ';
-		}
+		// // Go through each topic in the result
+		// while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
+		// {
+		// 	echo $topicRow['topic'] . ' ';
+		// }
 
 		echo '</p>';
 	}
