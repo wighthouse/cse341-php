@@ -67,35 +67,34 @@ try
 
 
 	// prepare the statement
-	$statement = $db->query('SELECT id, book, chapter, verse, content FROM scriptures');
-	// $statement->execute();
-    $row = $statement->fetchAll(PDO::FETCH_ASSOC);
-    print_r($row);
-	// // Go through each result
-	// while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-	// {
-	// 	echo '<p>';
-	// 	echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
-	// 	echo $row['verse'] . '</strong>' . ' - ' . $row['content'];
-	// 	echo '<br />';
-	// 	echo 'Topics: ';
+	$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scriptures');
+	$statement->execute();
 
-	// 	// get the topics now for this scripture
-	// 	$stmtTopics = $db->prepare('SELECT topic FROM topics t'
-	// 		. ' INNER JOIN scripture_topic st ON st.topic_id = t.id'
-	// 		. ' WHERE st.scripture_id = :scripture_id');
+	// Go through each result
+	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+	{
+		echo '<p>';
+		echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
+		echo $row['verse'] . '</strong>' . ' - ' . $row['content'];
+		echo '<br />';
+		echo 'Topics: ';
 
-	// 	$stmtTopics->bindValue(':scripture_id', $row['id']);
-	// 	$stmtTopics->execute();
+		// get the topics now for this scripture
+		$stmtTopics = $db->prepare('SELECT topic FROM topics t'
+			. ' INNER JOIN scripture_topic st ON st.topic_id = t.id'
+			. ' WHERE st.scripture_id = :scripture_id');
 
-	// 	// Go through each topic in the result
-	// 	while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
-	// 	{
-	// 		echo $topicRow['topic'] . ' ';
-	// 	}
+		$stmtTopics->bindValue(':scripture_id', $row['id']);
+		$stmtTopics->execute();
 
-	// 	echo '</p>';
-	// }
+		// Go through each topic in the result
+		while ($topicRow = $stmtTopics->fetch(PDO::FETCH_ASSOC))
+		{
+			echo $topicRow['topic'] . ' ';
+		}
+
+		echo '</p>';
+	}
 
 
 }
