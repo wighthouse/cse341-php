@@ -35,7 +35,7 @@
         $topics=getTopics();
         print_r($topics);
         echo "<form method='post' action='add-scriptures.php'>";
-        echo "<input type='text' name='book'>";
+        echo "<label class='above'><input type='text' name='book'>Book</label>";
         echo "<input type='text' name='chapter'>";
         echo "<input type='text' name='verse'>";
         echo "<input type='textarea' name='content'>";
