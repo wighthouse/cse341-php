@@ -27,13 +27,13 @@
         return $topics;
        }
 
-
-
-    
+       $topics=getTopics();
+       print_r($topics);
+   
 
     function addScriptures() {
         $topics=getTopics();
-
+        print_r($topics);
         echo "<form method='post' action='add-scriptures.php'>";
         echo "<input type='text' name='book'>";
         echo "<input type='text' name='chapter'>";
@@ -85,7 +85,7 @@ foreach ($topics as $topic) {
 
 <body>
     <header>
-        <?php include 'Homepage/php/header.php'; ?>
+        <?php include '../Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -94,7 +94,7 @@ foreach ($topics as $topic) {
           
         </div>
             <?php search(); 
-            print_r($topics);?>
+           ?>
 
             <?php addScriptures(); ?>
 
