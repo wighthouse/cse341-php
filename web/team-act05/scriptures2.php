@@ -19,9 +19,9 @@
         $stmt->execute(); 
         // The next line gets the data from the database and 
         // stores it as an array in the $topic's variable 
-        $topics = $stmt->fetchAll(); 
+        $topics = $stmt->fetchAll(PDO::FETCH_ASSOC); 
         // The next line closes the interaction with the database 
-        $stmt->closeCursor(PDO::FETCH_ASSOC); 
+        $stmt->closeCursor(); 
         // The next line sends the array of data back to where the function 
         // was called (this should be the controller) 
         return $topics;
