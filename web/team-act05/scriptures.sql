@@ -16,3 +16,16 @@ INSERT INTO scriptures (book, chapter, verse, content) VALUES ('Mosiah', 16, 9, 
 SELECT book, content from scriptures ORDER by id DESC;
 
 UPDATE scriptures SET content = 'And the light shineth in darkness; and the darkness comprehended it not.' WHERE id = 1;
+
+CREATE TABLE topics (
+  id SERIAL PRIMARY KEY,
+  topic VARCHAR(100)
+
+);
+
+CREATE TABLE scripture_topic (
+  scripture_id INT NOT NULL REFERENCES scriptures(id),
+  topic_id INT NOT NULL REFERENCES topics(id)
+);
+
+INSERT INTO topics (topic) VALUES ('Faith'), ('Sacrifice'), ('Charity');
