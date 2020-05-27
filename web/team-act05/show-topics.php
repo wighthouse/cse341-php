@@ -69,7 +69,7 @@ try
 	// prepare the statement
 	$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scriptures');
 	$statement->execute();
-    $row = $statement->fetch(PDO::FETCH_ASSOC);
+    $row = $statement->fetchAll(PDO::FETCH_ASSOC);
     print_r($row);
 	// // Go through each result
 	// while ($row = $statement->fetch(PDO::FETCH_ASSOC))
