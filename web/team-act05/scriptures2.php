@@ -27,8 +27,8 @@
         return $topics;
        }
 
-    //    $topics=getTopics();
-    //    print_r($topics);
+       $topics=getTopics();
+       print_r($topics);
    
 
     function addScriptures() {
@@ -98,7 +98,7 @@ foreach ($topics as $topic) {
             <?php search(); 
            ?>
 
-            <!-- <?php addScriptures(); ?> -->
+            <?php addScriptures(); ?>
 
     </main>
 
