@@ -28,23 +28,23 @@
        }
 
        $topics=getTopics();
-       print_r($topics);
+      
    
 
-    function addScriptures() {
-        $topics=getTopics();
-        print_r($topics);
-        echo "<form method='post' action='add-scriptures.php'>";
-        echo "<label class='above'><input type='text' name='book'>Book</label>";
-        echo "<input type='text' name='chapter'>";
-        echo "<input type='text' name='verse'>";
-        echo "<input type='textarea' name='content'>";
-foreach ($topics as $topic) {
-        echo "<input type='checkbox' value={$topic['id']} name={$topic['topic']}>";
-  }
-        echo "<button type='submit'>Add Scripture</button>";
-        echo "</form>";   
-    }
+//     function addScriptures() {
+//         $topics=getTopics();
+//         print_r($topics);
+//         echo "<form method='post' action='add-scriptures.php'>";
+//         echo "<label class='above'>Book<input type='text' name='book'></label>";
+//         echo "<label class='above'>Chapter<input type='text' name='chapter'></label>";
+//         echo "<label class='above'>Verse<input type='text' name='verse'></label>";
+//         echo "<input type='textarea' name='content'>";
+// foreach ($topics as $topic) {
+//         echo "<input type='checkbox' value={$topic['id']} name={$topic['topic']}>";
+//   }
+//         echo "<button type='submit'>Add Scripture</button>";
+//         echo "</form>";   
+//     }
     function get_db(){
         $db=NULL;
     try
@@ -97,8 +97,18 @@ foreach ($topics as $topic) {
         </div>
             <?php search(); 
            ?>
-
-            <?php addScriptures(); ?>
+             <form method='post' action='add-scriptures.php'>
+        <label class='above'>Book<input type='text' name='book'></label>
+        <label class='above'>Chapter<input type='text' name='chapter'></label>
+        <label class='above'>Verse<input type='text' name='verse'></label>
+        <label class='above'>Text<input type='textarea' name='content'>
+<?php foreach ($topics as $topic) {
+    //  $topics=getTopics();
+        echo "<label class='above'>{$topic['topic']}<input type='checkbox' value={$topic['id']} name={$topic['topic']}></label>";
+}?>
+        <button type='submit'>Add Scripture</button>
+        </form>   
+           
 
     </main>
 
