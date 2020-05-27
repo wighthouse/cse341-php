@@ -96,7 +96,7 @@ foreach ($topics as $topic) {
             <?php search(); 
            ?>
 
-            <?php addScriptures(); ?>
+            <!-- <?php addScriptures(); ?> -->
 
     </main>
 
