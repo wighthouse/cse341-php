@@ -93,7 +93,8 @@ foreach ($topics as $topic) {
 
           
         </div>
-            <?php search(); ?>
+            <?php search(); 
+            print_r($topics);?>
 
             <?php addScriptures(); ?>
 
