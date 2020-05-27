@@ -27,8 +27,8 @@
         return $topics;
        }
 
-       $topics=getTopics();
-       print_r($topics);
+    //    $topics=getTopics();
+    //    print_r($topics);
    
 
     function addScriptures() {
