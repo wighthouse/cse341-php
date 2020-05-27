@@ -1,7 +1,8 @@
 <?php
     
 
-
+    function get_db(){
+        $db=NULL;
     try
     {
       $dbUrl = getenv('DATABASE_URL');
@@ -24,7 +25,7 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-
+    }
    
 
     function validateInput($data){
@@ -34,25 +35,66 @@
         return $data;
     }
 
+
     $book = $_POST['book'];
 $chapter = $_POST['chapter'];
 $verse = $_POST['verse'];
 $content = $_POST['content'];
-$topicIds = $_POST['topic'];
+$topicIds = $_POST['chkTopics'];
 
-    // If the page loads as a POST request, look for this variable, and if it is set
-if(isset($_POST['id'])) {
-    // This is just for testing to make sure we have the correct text
-    //echo "<h1>" . $_POST['bookToFind'] . "</h1>";
-    // Validate & sanitize the input
-    $searchText = validateInput($_GET['id']);
-    // Now run the query to find the text in the database, and then save the results as a variable
-    $books = displayQuery($searchText, $db);
-  // Change the method name
-  print_r($books);
+$db = get_db();
   
 
-  }
+try
+{
+	// Add the Scripture
+
+	// We do this by preparing the query with placeholder values
+	$query = 'INSERT INTO scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
+	$statement = $db->prepare($query);
+
+	// Now we bind the values to the placeholders. This does some nice things
+	// including sanitizing the input with regard to sql commands.
+	$statement->bindValue(':book', $book);
+	$statement->bindValue(':chapter', $chapter);
+	$statement->bindValue(':verse', $verse);
+	$statement->bindValue(':content', $content);
+
+	$statement->execute();
+
+	// get the new id
+	$scriptureId = $db->lastInsertId("scriptures_id_seq");
+
+	// Now go through each topic id in the list from the user's checkboxes
+	foreach ($topicIds as $topicId)
+	{
+		echo "ScriptureId: $scriptureId, topicId: $topicId";
+
+		// Again, first prepare the statement
+		$statement = $db->prepare('INSERT INTO scripture_topic(scripture_id, topic_id) VALUES(:scripture_id, :topic_id)');
+
+		// Then, bind the values
+		$statement->bindValue(':scripture_id', $scriptureId);
+		$statement->bindValue(':topic_id', $topicId);
+
+		$statement->execute();
+	}
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
+}
+
+// finally, redirect them to a new page to actually show the topics
+// header("Location: showTopics.php");
+
+die(); // we always include a die after redirects. In this case, there would be no
+       // harm if the user got the rest of the page, because there is nothing else
+       // but in general, there could be things after here that we don't want them
+       // to see.
 
 ?>
 <!doctype html>
