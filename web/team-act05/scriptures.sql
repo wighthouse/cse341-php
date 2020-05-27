@@ -29,3 +29,5 @@ CREATE TABLE scripture_topic (
 );
 
 INSERT INTO topics (topic) VALUES ('Faith'), ('Sacrifice'), ('Charity');
+
+SELECT topic FROM topics t INNER JOIN scripture_topic st ON st.topic_id = t.id WHERE st.scripture_id = 2;
