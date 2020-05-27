@@ -69,7 +69,7 @@ try
 	// prepare the statement
 	$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scriptures');
 	$statement->execute();
-
+print_r($statement);
 	// Go through each result
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	{
@@ -84,7 +84,7 @@ try
 			. ' INNER JOIN scripture_topic st ON st.topic_id = t.id'
 			. ' WHERE st.scripture_id = :scripture_id');
 
-		$stmtTopics->bindValue(':scripture_id', 6);
+		$stmtTopics->bindValue(':scripture_id', $row['id']);
 		$stmtTopics->execute();
 
 		// Go through each topic in the result
