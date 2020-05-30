@@ -10,7 +10,7 @@
 
     <title>CTE341 | Web Backend Development II | Race Registration</title>
 
-    <link rel="stylesheet" href="/web/race/css/race.css">
+    <link rel="stylesheet" href="css/race.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
 
 </head>
