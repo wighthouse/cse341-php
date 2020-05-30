@@ -21,7 +21,7 @@
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Race Participants Search</h2>
+            <h2 class="page-title">Hennepin County Peanuts Run</br>Race Participants Search</h2>
 
           
         </div>
