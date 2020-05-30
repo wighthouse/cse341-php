@@ -23,8 +23,8 @@
                     <ul>
                         <li><a href="https://murmuring-coast-84451.herokuapp.com/shopping-cart/shop.php">Wk 3: Shopping Cart</a></li>
                         <li ><a href="https://github.com/wighthouse/cse341-php/tree/master/db">Wk 4: DB Setup</a></li>
-                        <li><a href="https://murmuring-coast-84451.herokuapp.com/team-act05/scriptures.php">Wk 5: DB Access</li>
-                        <li>Wk 6: DB Update</li>
+                        <li><a href="https://murmuring-coast-84451.herokuapp.com/race/race-registration.php">Wk 5: DB Access</a></li>
+                        <li><a href="https://murmuring-coast-84451.herokuapp.com/race/race-registration.php">Wk 6: DB Update</a></li>
                         <li>Wk 7: Project 1</li>
                     </ul>
                 </div>
