@@ -44,7 +44,7 @@
     </main>
 
     <footer>
-    
+    <?php include '../Homepage/php/footer.php'; ?>
     </footer>
 </body>
 
