@@ -33,17 +33,21 @@
                 ></label>
                 <label class="above">Last name*<input type="text" name="last_name" required 
                 ></label>
-                <label class="above">email address*<input type="email" name="email" required 
+                <label class="above">Email address*<input type="email" name="email" required 
                 ></label>
-                <?php
+                <label class="above">Race*<?php
                     $events= getEvents();
                     $eventList = buildEventList($events);
-                    echo $eventList; ?>
+                    echo $eventList; ?></label>
+                <label class="above">Shirt*<?php
+                    $sizes= getShirtSizes();
+                    $sizeList = buildShirtSizeList($sizes);
+                    echo $sizeList; ?></label>
                 
                 <p>*All fields are required</p>
-                <input type="submit" name="submit" class="button" value="Create Account">
+                <input type="submit" name="submit" class="button" value="Register">
                 <!-- Add the action name - value pair -->
-                <input type="hidden" name="action" value="register-user">
+                <input type="hidden" name="action" value="register-racer">
                 <h3>Already have an account? Login instead.</h3>
                 <a href="http://localhost/acme/accounts/index.php?action=login" class="button">Go to Login Page</a>
             </form>
