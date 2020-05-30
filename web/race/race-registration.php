@@ -50,6 +50,12 @@
                 <h3>Already registered, and need to change something? Modify your registration, instead.</h3>
                 <a href="race-modify.php" class="button">Modify Registration</a>
             </form>
+
+            <?php
+            $confirmation_id=createCode();
+            echo $confirmation_id;
+            ?>
+
         
         </div>
 
