@@ -35,6 +35,10 @@
                 ></label>
                 <label class="above">email address*<input type="email" name="email" required 
                 ></label>
+                <?php
+                    $events= getEvents();
+                    $eventList = buildEventList($events);
+                    echo $eventList; ?>
                 
                 <p>*All fields are required</p>
                 <input type="submit" name="submit" class="button" value="Create Account">

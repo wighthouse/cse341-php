@@ -27,7 +27,7 @@ CREATE TABLE public.participant (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR (80) NOT NULL,
     last_name VARCHAR (80) NOT NULL,
-    email 
+    email VARCHAR (100) NOT NULL,
     registration_date DATE NOT NULL DEFAULT CURRENT_DATE,
     shirt_size_id INT REFERENCES public.shirt_size(id),
     event_id INT NOT NULL REFERENCES public.event(id),
@@ -57,16 +57,28 @@ INSERT INTO public.event (event_name) VALUES
     ('5k'),
     ('10k');
 
-INSERT INTO public.participant (first_name, last_name, shirt_size_id, event_id, confirmation_id)
+INSERT INTO public.participant (first_name, last_name, email, shirt_size_id, event_id, confirmation_id)
    VALUES 
-   ('Charlie', 'Brown', 3, 2,(SELECT array_to_string(array((
+   ('Charlie', 'Brown', 'charlie.brown@gmail.com', 3, 2,(SELECT array_to_string(array((
    SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
                     FROM mod((random()*32)::int, 32)+1 FOR 1)
    FROM generate_series(1,8))),''))),
---    ('Sally', 'Brown', 4, 2),  
---    ('Peppermint', 'Patty', 4, 1),
---    ('Linus', 'van Pelt', 3, 1),
---    ('Lucy', 'van Pelt', 5, 1)
+   ('Sally', 'Brown', 'sally.brown@gmail.com', 4, 2, (SELECT array_to_string(array((
+   SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+                    FROM mod((random()*32)::int, 32)+1 FOR 1)
+   FROM generate_series(1,8))),''))),  
+   ('Peppermint', 'Patty', 'peppermint.patty@gmail.com', 4, 1, (SELECT array_to_string(array((
+   SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+                    FROM mod((random()*32)::int, 32)+1 FOR 1)
+   FROM generate_series(1,8))),''))),
+   ('Linus', 'van Pelt','linus.vanpelt@gmail.com', 3, 1, (SELECT array_to_string(array((
+   SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+                    FROM mod((random()*32)::int, 32)+1 FOR 1)
+   FROM generate_series(1,8))),''))),
+   ('Lucy', 'van Pelt', 'lucy.vanpelt@gmail.com', 5, 1, (SELECT array_to_string(array((
+   SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+                    FROM mod((random()*32)::int, 32)+1 FOR 1)
+   FROM generate_series(1,8))),'')))
 
 ;
 
