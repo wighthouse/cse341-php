@@ -202,6 +202,14 @@ footer {
 }
 
 .main-form {
-    display: block;
-    margin: 20px;
+    display: flex;
+    margin: 0 auto 20px;
+    padding: 20px;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px 5px #bbb;
 }
