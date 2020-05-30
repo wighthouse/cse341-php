@@ -25,13 +25,32 @@
 
           
         </div>
+        <div class="main-form search">
         <h3>Search for Race Participants by event.</h3>
         
         <?php 
         $searchBox = search();
         echo $searchBox;
         ?>
+        </div>
 
+        <div class="main-form register">
+        <h3>Register for an event.</h3>
+        
+        <?php 
+        $searchBox = search();
+        echo $searchBox;
+        ?>
+        </div>
+
+        <div class="main-form modify">
+        <h3>Modify your Registration.</h3>
+        
+        <?php 
+        $searchBox = search();
+        echo $searchBox;
+        ?>
+        </div>
     </main>
 
     <footer>
