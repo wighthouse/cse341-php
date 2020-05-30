@@ -227,8 +227,40 @@ select#event_id {
     margin: 10px 0;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #990033;
+    border: 1px solid #50006d;
     border-radius: 4px;
     width: 100%;
     max-width: 400px;
+}
+
+.main-form .button {
+    border: none;
+    background-color: #50006d;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+a.button,
+p.button,
+input.button {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    background-color: #50006d;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.main-form .button:hover {
+    background-color: #4e1663;
+    color: #ffffff;
+    font-size: 1.25rem;
 }

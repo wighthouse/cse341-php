@@ -25,7 +25,6 @@
 
           
         <div class="main-form register">
-        <h3>Register for an event.</h3>
         <form class="formContainer" action="add-racer.php" method="post" >
                 <h3 class="formHeading">Register for a Race</h3>
 
@@ -48,8 +47,8 @@
                 <input type="submit" name="submit" class="button" value="Register">
                 <!-- Add the action name - value pair -->
                 <input type="hidden" name="action" value="register-racer">
-                <h3>Already have an account? Login instead.</h3>
-                <a href="http://localhost/acme/accounts/index.php?action=login" class="button">Go to Login Page</a>
+                <h3>Already registered, and need to change something? Modify your registration, instead.</h3>
+                <a href="race-modify.php" class="button">Modify Registration</a>
             </form>
         
         </div>
