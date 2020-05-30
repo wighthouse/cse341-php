@@ -203,7 +203,7 @@ footer {
 
 .main-form {
     display: flex;
-    margin: 0 auto 20px;
+    margin: 20px auto 20px;
     padding: 20px;
     flex-direction: column;
     max-width: 400px;
@@ -212,4 +212,23 @@ footer {
     color: #000000;
     border-radius: 4px;
     box-shadow: 5px 5px 15px 5px #bbb;
+}
+
+label.above {
+    display: block;
+    padding-top: 10px;
+}
+
+label.above input,
+textarea,
+select#shirt_id,
+select#event_id {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #990033;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
 }
