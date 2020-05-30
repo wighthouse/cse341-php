@@ -25,11 +25,13 @@ CREATE TABLE public.shirt_size (
 
 CREATE TABLE public.participant (
     id SERIAL PRIMARY KEY,
-    participant_first_name VARCHAR (80) NOT NULL,
-    participant_last_name VARCHAR (80) NOT NULL,
+    first_name VARCHAR (80) NOT NULL,
+    last_name VARCHAR (80) NOT NULL,
+    email 
     registration_date DATE NOT NULL DEFAULT CURRENT_DATE,
     shirt_size_id INT REFERENCES public.shirt_size(id),
-    event_id INT NOT NULL REFERENCES public.event(id)
+    event_id INT NOT NULL REFERENCES public.event(id),
+    confirmation_id VARCHAR (10) NOT NUll
 
 );
 
@@ -55,13 +57,16 @@ INSERT INTO public.event (event_name) VALUES
     ('5k'),
     ('10k');
 
-INSERT INTO public.participant (participant_first_name, participant_last_name, shirt_size_id, event_id)
+INSERT INTO public.participant (first_name, last_name, shirt_size_id, event_id, confirmation_id)
    VALUES 
-   ('Charlie', 'Brown', 3, 2),
-   ('Sally', 'Brown', 4, 2),  
-   ('Peppermint', 'Patty', 4, 1),
-   ('Linus', 'van Pelt', 3, 1),
-   ('Lucy', 'van Pelt', 5, 1)
+   ('Charlie', 'Brown', 3, 2,(SELECT array_to_string(array((
+   SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+                    FROM mod((random()*32)::int, 32)+1 FOR 1)
+   FROM generate_series(1,8))),''))),
+--    ('Sally', 'Brown', 4, 2),  
+--    ('Peppermint', 'Patty', 4, 1),
+--    ('Linus', 'van Pelt', 3, 1),
+--    ('Lucy', 'van Pelt', 5, 1)
 
 ;
 

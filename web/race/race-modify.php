@@ -62,7 +62,7 @@ if (isset($_POST['event_id'])) {
 <head>
   <meta charset="utf-8">
 
-  <title>CTE341 | Web Backend Development II | Race Query Results</title>
+  <title>CTE341 | Web Backend Development II | Modify Registration</title>
 
   <link rel="stylesheet" href="css/race.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
@@ -75,7 +75,7 @@ if (isset($_POST['event_id'])) {
   </header>
   <main>
     <div class="main-container">
-      <h2 class="page-title">Race Query Results</h2>
+      <h2 class="page-title">Modify Your Registration</h2>
 
       <?php
       echo "<h3>{$racers[0]['event_name']} Race Participants</h3><br/>";

@@ -21,36 +21,31 @@
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Hennepin County Peanuts Run</br>Race Participants Search</h2>
+            <h2 class="page-title">Hennepin County Peanuts Run</br>Race Registration Page</h2>
 
           
-        </div>
-        <div class="main-form search">
-        <h3>Search for Race Participants by event.</h3>
-        
-        <?php 
-        $searchBox = search();
-        echo $searchBox;
-        ?>
-        </div>
-
         <div class="main-form register">
         <h3>Register for an event.</h3>
+        <form class="formContainer" action="add-racer.php" method="post" >
+                <h3 class="formHeading">Register for a Race</h3>
+
+                <label class="above">First name*<input type="text" name="first_name" required 
+                ></label>
+                <label class="above">Last name*<input type="text" name="last_name" required 
+                ></label>
+                <label class="above">email address*<input type="email" name="email" required 
+                ></label>
+                
+                <p>*All fields are required</p>
+                <input type="submit" name="submit" class="button" value="Create Account">
+                <!-- Add the action name - value pair -->
+                <input type="hidden" name="action" value="register-user">
+                <h3>Already have an account? Login instead.</h3>
+                <a href="http://localhost/acme/accounts/index.php?action=login" class="button">Go to Login Page</a>
+            </form>
         
-        <?php 
-        $searchBox = search();
-        echo $searchBox;
-        ?>
         </div>
 
-        <div class="main-form modify">
-        <h3>Modify your Registration.</h3>
-        
-        <?php 
-        $searchBox = search();
-        echo $searchBox;
-        ?>
-        </div>
     </main>
 
     <footer>
