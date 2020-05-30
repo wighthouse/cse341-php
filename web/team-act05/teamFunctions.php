@@ -92,6 +92,35 @@ function get_db() {
         return $topics;
     }
 
+// Processes post data when we are adding a new scripture to the database
+function processPostDataForNewScripture() {
+    //print_r($_POST);
+$book = $_POST['book'];
+$chapter = $_POST['chapter'];
+$verse = $_POST['verse'];
+$content = $_POST['content'];
+$topicIds = $_POST['chkTopics'];
+
+// Check if the checkbox is checked for 'Add New Topic'.  If true, we're going to add it to the DB, get the ID for it, then add it to the array holding the other topic IDs
+if(isset($_POST['addNewTopic'])) {
+    // Get the topic name
+    $topicName = $_POST['newTopic'];
+    $topicId = addNewTopic($topicName);
+
+    //echo "Topic ID: " . $topicId;
+
+    // Now add that topic to the array of topics as we are assuming the user wants to add that topic to this scripture
+    array_push($topicIds, $topicId);
+
+   // print_r($topicIds);
+}
+
+
+// Call this method to add scriptures & topics to the database
+addScripture($book, $chapter, $verse, $content, $topicIds);
+}
+    
+
     function getScriptures() {
         try
         {
@@ -196,4 +225,36 @@ function get_db() {
             die();
         }
     }
+// Function for adding a new topic to the database
+function addNewTopic($name) {
+        
+    try {
+        // Add the Scripture
+        $db = dbConnection();
+        // We do this by preparing the query with placeholder values
+        $query = 'INSERT INTO public.topics(topic) VALUES(:name)';
+        $statement = $db->prepare($query);
+
+        // Now we bind the values to the placeholders. This does some nice things
+        // including sanitizing the input with regard to sql commands.
+        $statement->bindValue(':name', $name,PDO::PARAM_STR);
+
+        $statement->execute();
+
+        // get the new id
+        $topicId = $db->lastInsertId();
+
+        $statement->closeCursor();
+
+        return $topicId;
+    }
+    catch (Exception $ex)
+    {
+        // Please be aware that you don't want to output the Exception message in
+        // a production environment
+        echo "Error with DB. Details: $ex";
+        die();
+    }
+}
+
 ?>
