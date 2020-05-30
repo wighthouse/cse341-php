@@ -1,46 +1,25 @@
 <?php
     
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-    
-      $dbOpts = parse_url($dbUrl);
-    
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-    
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-     
-    }
-    catch (PDOException $ex)
-        {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
-    }
+    @require_once('teamFunctions.php');
 
    
 
-    function validateInput($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+  //   function validateInput($data){
+  //       $data = trim($data);
+  //       $data = stripslashes($data);
+  //       $data = htmlspecialchars($data);
+  //       return $data;
+  //   }
 
-    function searchQuery($name, $db) {
-   // $db=dbConnection();    
-    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book = :name');
-    //$name= '$name';
-    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-    $stmt->execute();
-    $book = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $book;
-    }
+  //   function searchQuery($name, $db) {
+  //  // $db=dbConnection();    
+  //   $stmt = $db->prepare('SELECT * FROM scriptures WHERE book = :name');
+  //   //$name= '$name';
+  //   $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+  //   $stmt->execute();
+  //   $book = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  //   return $book;
+  //   }
 
     // If the page loads as a POST request, look for this variable, and if it is set
 if(isset($_POST['bookToFind'])) {
@@ -72,7 +51,7 @@ if(isset($_POST['bookToFind'])) {
 
 <body>
     <header>
-        <?php include 'Homepage/php/header.php'; ?>
+        <?php include '../Homepage/php/header.php'; ?>
     </header>
     <main>
         <div class="main-container">
@@ -93,7 +72,7 @@ if(isset($_POST['bookToFind'])) {
     </main>
 
     <footer>
-    
+    <?php include '../Homepage/php/footer.php'; ?>
     </footer>
 </body>
 
