@@ -91,7 +91,7 @@ nav {
 
 main {
     max-width: 1020px;
-    min-height: (vh-75px);
+    min-height: calc(100vh-75px);
     margin: auto;
 }
 
