@@ -4,25 +4,18 @@
    
    
 
-    function validateInput($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+    // function validateInput($data){
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;
+    // }
 
 // If POST is set, then do the following
 if(isset($_POST)) {
-    $book = $_POST['book'];
-    $chapter = $_POST['chapter'];
-    $verse = $_POST['verse'];
-    $content = $_POST['content'];
-    $topicIds = $_POST['chkTopics'];
 
-    echo "Adding to DB";
-
-    // Call this method to add scriptures & topics to the database
-    addScripture($book, $chapter, $verse, $content, $topicIds);
+    // Moved all this to a function.  Why?  Because we are going to have to do the same work on the scripturesStretchChallenge.php page
+    processPostDataForNewScripture();
 
     // Now redirect to the new page.  Technically you'd want to check if values were inserted, and if successfull redirect the user, but this works for now
     // finally, redirect them to a new page to actually show the topics
