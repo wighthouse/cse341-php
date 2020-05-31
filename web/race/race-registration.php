@@ -53,7 +53,7 @@
 
             <?php
             $confirmation_id=createCode();
-            echo $confirmation_id;
+            print_r($confirmation_id); 
             ?>
 
         
