@@ -10,23 +10,23 @@ print_r($_POST);
  $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
  $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
  
- $emailMatch = checkEmailMatch($clientEmail);
+//  $emailMatch = checkEmailMatch($email);
 
- // Check for existing email address in the table
- if ($emailMatch) {
-   $message = '<p class="notify">That email address already exists. Do you want to modify your registration instead?</p>';
-   $_SESSION['message'] = $message;
-   include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/login.php';
-   exit;
- }
+//  // Check for existing email address in the table
+//  if ($emailMatch) {
+//    $message = '<p class="notify">That email address already exists. Do you want to modify your registration instead?</p>';
+//    $_SESSION['message'] = $message;
+//    include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/login.php';
+//    exit;
+//  }
 
  // Check for missing data
- if (empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword)) {
-   $message = '<p class="notify">Please provide information for all empty fields.</p>';
-   $_SESSION['message'] = $message;
-   include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/registration.php';
-   exit;
- }
+//  if (empty($first_name) || empty($last_name) || empty($$email) || empty($shirt_size_id) || empty($event_id)) {
+//    $message = '<p class="notify">Please provide information for all empty fields.</p>';
+//    $_SESSION['message'] = $message;
+//    include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/registration.php';
+//    exit;
+//  }
 
 // function validateInput($data)
 // {

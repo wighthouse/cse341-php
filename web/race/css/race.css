@@ -221,7 +221,7 @@ label.above {
 
 label.above input,
 textarea,
-select#shirt_id,
+select#shirt_size_id,
 select#event_id {
     display: block;
     margin: 10px 0;
