@@ -84,7 +84,7 @@ if (isset($_POST['event_id'])) {
 
         echo '<br/><br/>';
       }
-var_dump($racers);
+
       ?>
     </div>
 

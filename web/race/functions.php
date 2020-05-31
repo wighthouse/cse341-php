@@ -162,3 +162,46 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
     // Return the indication of success (rows changed)
     return $rowsChanged;
 }
+
+   // Get client information by confirmation_id<>
+   function getracerInfo($confirmation_id)
+   {
+       $db = acmeConnect();
+       $sql = 'SELECT * FROM participant WHERE confirmation_id = :confirmation_id';
+       $stmt = $db->prepare($sql);
+       $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_INT);
+       $stmt->execute();
+       $racerInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+       $stmt->closeCursor();
+       return $racerInfo;
+   }
+   /*This function will handle account info updates.*/
+   function updateRacer($first_name, $last_name, $email, $shirt_size_id, $event_id, $confirmation_id)
+   {
+       // Create a connection object using the acme connection function
+       $db = acmeConnect();
+       // The SQL statement
+       $sql = 'UPDATE participant SET first_name=:first_name, last_name=:last_name, email=:email, shirt_size_id=:shirt_size_id, event_id=:event_id
+        WHERE confirmation_id=:confirmation_id' ;
+       // Create the prepared statement using the acme connection
+       $stmt = $db->prepare($sql);
+       // The next four lines replace the placeholders in the SQL
+       // statement with the actual values in the variables
+       // and tells the database the type of data it is
+       $stmt->bindValue(':first_name', $first_name, PDO::PARAM_STR);
+       $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
+       $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+       $stmt->bindValue(':shirt_size_id', $shirt_size_id, PDO::PARAM_INT);
+       $stmt->bindValue(':event_id', $event_id, PDO::PARAM_INT);
+       $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_INT);
+       
+       // Insert the data
+       $stmt->execute();
+       // Ask how many rows changed as a result of our insert
+       $rowsChanged = $stmt->rowCount();
+       // Close the database interaction
+       $stmt->closeCursor();
+       // Return the indication of success (rows changed)
+       return $rowsChanged;
+       echo $rowsChanged;
+   }
