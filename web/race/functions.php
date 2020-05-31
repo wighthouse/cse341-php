@@ -125,6 +125,7 @@ function createCode() {
   $stmt->closeCursor(); 
   // The next line sends the array of data back to where the function 
   // was called (this should be the controller) 
+  $confirmation_id= $confirmation_id[0];
   return $confirmation_id;
  }
 
