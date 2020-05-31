@@ -91,7 +91,7 @@ function getShirtSizes(){
 
 //Build the drop-down event select list
 function buildShirtSizeList($sizes){
-  $sizeList = "<select id='shirt_id' name='shirt_id'>";
+  $sizeList = "<select id='shirt_size_id' name='shirt_size_id'>";
   $sizeList .= "<option value='' selected disabled>Select a Size</option>";
   foreach ($sizes as $size) {
     $sizeList .= "<option value='$size[id]'>$size[size]</option>";
