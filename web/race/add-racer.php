@@ -2,7 +2,30 @@
  require_once('functions.php');
  $db = get_db();
 
+ // Filter and store the data
+ $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
+ $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
+ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+ $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
+ $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
+ 
+ $emailMatch = checkEmailMatch($clientEmail);
 
+ // Check for existing email address in the table
+ if ($emailMatch) {
+   $message = '<p class="notify">That email address already exists. Do you want to modify your registration instead?</p>';
+   $_SESSION['message'] = $message;
+   include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/login.php';
+   exit;
+ }
+
+ // Check for missing data
+ if (empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword)) {
+   $message = '<p class="notify">Please provide information for all empty fields.</p>';
+   $_SESSION['message'] = $message;
+   include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/registration.php';
+   exit;
+ }
 
 // function validateInput($data)
 // {
@@ -49,12 +72,12 @@ if(isset($_POST)) {
     // Now redirect to the new page.  Technically you'd want to check if values were inserted, and if successfull redirect the user, but this works for now
     // finally, redirect them to a new page to actually show the topics
     
-    // header("Location: index.php");
+    header("Location: index.php");
 
-    // die(); // we always include a die after redirects. In this case, there would be no
-    //        // harm if the user got the rest of the page, because there is nothing else
-    //        // but in general, there could be things after here that we don't want them
-    //        // to see.
+    die(); // we always include a die after redirects. In this case, there would be no
+           // harm if the user got the rest of the page, because there is nothing else
+           // but in general, there could be things after here that we don't want them
+           // to see.
 
 }
 
@@ -65,7 +88,7 @@ if(isset($_POST)) {
 <head>
   <meta charset="utf-8">
 
-  <title>CTE341 | Web Backend Development II | Race Query Results</title>
+  <title>CTE341 | Web Backend Development II | Add Racer</title>
 
   <link rel="stylesheet" href="css/race.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
@@ -78,7 +101,7 @@ if(isset($_POST)) {
   </header>
   <main>
     <div class="main-container">
-      <h2 class="page-title">Race Query Results</h2>
+      <h2 class="page-title">Add Racer</h2>
 
       <?php
       echo "<h3>{$racers[0]['event_name']} Race Participants</h3><br/>";
