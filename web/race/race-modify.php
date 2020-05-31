@@ -76,7 +76,8 @@ if (isset($_POST['confirmation_id'])) {
   <main>
     <div class="main-container">
       <h2 class="page-title">Modify Your Registration</h2>
-      <h3 class="formHeading">Modify Account Information</h3>
+      <form class="formContainer" action="update-racer.php" method="post" >
+      <h3 class="formHeading">Modify Race Registration</h3>
                 <p>Make the necessary changes below.</p>
 
                 <label class="above">First name<input type="text" name="first_name" required <?php if (isset($first_name)) {

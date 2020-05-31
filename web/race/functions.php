@@ -166,10 +166,10 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
    // Get client information by confirmation_id<>
    function getRacerInfo($confirmation_id)
    {
-       $db = acmeConnect();
+       $db = get_db();
        $sql = 'SELECT * FROM participant WHERE confirmation_id = :confirmation_id';
        $stmt = $db->prepare($sql);
-       $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_INT);
+       $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
        $stmt->execute();
        $racerInfo = $stmt->fetch(PDO::FETCH_ASSOC);
        $stmt->closeCursor();
@@ -179,7 +179,7 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
    function updateRacer($first_name, $last_name, $email, $shirt_size_id, $event_id, $confirmation_id)
    {
        // Create a connection object using the acme connection function
-       $db = acmeConnect();
+       $db = get_db();
        // The SQL statement
        $sql = 'UPDATE participant SET first_name=:first_name, last_name=:last_name, email=:email, shirt_size_id=:shirt_size_id, event_id=:event_id
         WHERE confirmation_id=:confirmation_id' ;
