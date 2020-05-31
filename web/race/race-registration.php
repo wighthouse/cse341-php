@@ -46,7 +46,7 @@
                 <p>*All fields are required</p>
                 <input type="submit" name="submit" class="button" value="Register">
                 <!-- Add the action name - value pair -->
-                <input type="hidden" name="action" value="register-racer">
+                <!-- <input type="hidden" name="action" value="register-racer"> -->
                 <h3>Already registered, and need to change something? Modify your registration, instead.</h3>
                 <a href="race-modify.php" class="button">Modify Registration</a>
             </form>

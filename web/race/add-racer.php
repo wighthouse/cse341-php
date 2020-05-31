@@ -1,6 +1,7 @@
 <?php
  require_once('functions.php');
  $db = get_db();
+print_r($_POST);
 
  // Filter and store the data
  $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
