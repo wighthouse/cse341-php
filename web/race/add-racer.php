@@ -9,7 +9,9 @@ print_r($_POST);
  $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
  $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
  $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
- 
+ echo $event_id;
+ $confirmation_id=createCode();
+ echo $confirmation_id;
 //  $emailMatch = checkEmailMatch($email);
 
 //  // Check for existing email address in the table
