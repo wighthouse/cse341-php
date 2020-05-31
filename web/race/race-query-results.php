@@ -80,7 +80,7 @@ if (isset($_POST['event_id'])) {
       <?php
       echo "<h3>{$racers[0]['event_name']} Race Participants</h3><br/>";
       foreach ($racers as $row) {
-        echo "<strong>" . $row['first_name'] . ' ' . $row['last_name'] . ' ' . $row['shirt_size'] . '</strong>';
+        echo "<strong>" . $row['first_name'] . ' ' . $row['last_name'] . ' ' . $row['size'] . '</strong>';
 
         echo '<br/><br/>';
       }
