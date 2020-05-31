@@ -37,7 +37,7 @@ function updateQuery($confirmation_id, $db)
 
   $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
   $stmt->execute();
-  $racers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $racers = $stmt->fetch(PDO::FETCH_ASSOC);
   return $racers;
 }
 
