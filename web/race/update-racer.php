@@ -77,15 +77,15 @@ if(isset($_POST)) {
     // Now redirect to the new page.  Technically you'd want to check if values were inserted, and if successfull redirect the user, but this works for now
     // finally, redirect them to a new page to actually show the topics
     
-    header("Location: index.php");
+    // header("Location: index.php");
 
-    die(); // we always include a die after redirects. In this case, there would be no
-           // harm if the user got the rest of the page, because there is nothing else
-           // but in general, there could be things after here that we don't want them
-           // to see.
+    // die(); // we always include a die after redirects. In this case, there would be no
+    //        // harm if the user got the rest of the page, because there is nothing else
+    //        // but in general, there could be things after here that we don't want them
+    //        // to see.
 
 }
-
+echo $rowsChanged;
 ?>
 <!doctype html>
 <html lang="en">
@@ -106,10 +106,10 @@ if(isset($_POST)) {
   </header>
   <main>
     <div class="main-container">
-      <h2 class="page-title">Add Racer</h2>
+      <h2 class="page-title">Update Racer</h2>
 
       <?php
-      echo "<h3>{$racers[0]['event_name']} Race Participants</h3><br/>";
+      echo "<h3>{$racers[0]['first_name']}'s Registration Updated</h3><br/>";
       foreach ($racers as $row) {
         echo "<strong>" . $row['participant_first_name'] . ' ' . $row['participant_last_name'] . '</strong>';
 

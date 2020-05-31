@@ -193,7 +193,7 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
        $stmt->bindValue(':shirt_size_id', $shirt_size_id, PDO::PARAM_INT);
        $stmt->bindValue(':event_id', $event_id, PDO::PARAM_INT);
-       $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_INT);
+       $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
        
        // Insert the data
        $stmt->execute();
@@ -203,5 +203,5 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
        $stmt->closeCursor();
        // Return the indication of success (rows changed)
        return $rowsChanged;
-       echo $rowsChanged;
+       
    }
