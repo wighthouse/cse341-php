@@ -120,7 +120,7 @@ function createCode() {
   $stmt->execute(); 
   // The next line gets the data from the database and 
   // stores it as an array in the $events variable 
-  $confirmation_id = $stmt->fetchAll(); 
+  $confirmation_id = $stmt->fetch(); 
   // The next line closes the interaction with the database 
   $stmt->closeCursor(PDO::FETCH_ASSOC); 
   // The next line sends the array of data back to where the function 
