@@ -113,7 +113,7 @@ function createCode() {
   $sql = "SELECT array_to_string(array((
     SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
                      FROM mod((random()*32)::int, 32)+1 FOR 1)
-    FROM generate_series(1,8))),''))"; 
+    FROM generate_series(1,8))),'')"; 
   // The next line creates the prepared statement using the db connection      
   $stmt = $db->prepare($sql);
   // The next line runs the prepared statement 
