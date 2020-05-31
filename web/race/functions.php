@@ -107,14 +107,27 @@ function checkEmail($email)
 }
 
 function createCode() {
-  // $db=get_db();
+  $db=get_db();
   $confirmation_id="";
-  $confirmation_id="SELECT array_to_string(array((
+  // The SQL statement to be used with the database 
+  $sql = "SELECT array_to_string(array((
     SELECT SUBSTRING('ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
                      FROM mod((random()*32)::int, 32)+1 FOR 1)
-    FROM generate_series(1,8))),''))";
-    return $confirmation_id;
-}
+    FROM generate_series(1,8))),''))"; 
+  // The next line creates the prepared statement using the db connection      
+  $stmt = $db->prepare($sql);
+  // The next line runs the prepared statement 
+  $stmt->execute(); 
+  // The next line gets the data from the database and 
+  // stores it as an array in the $events variable 
+  $confirmation_id = $stmt->fetchAll(); 
+  // The next line closes the interaction with the database 
+  $stmt->closeCursor(PDO::FETCH_ASSOC); 
+  // The next line sends the array of data back to where the function 
+  // was called (this should be the controller) 
+  return $confirmation_id;
+ }
+
 
 
 /*This function will handle site registrations.*/
