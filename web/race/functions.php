@@ -164,7 +164,7 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
 }
 
    // Get client information by confirmation_id<>
-   function getracerInfo($confirmation_id)
+   function getRacerInfo($confirmation_id)
    {
        $db = acmeConnect();
        $sql = 'SELECT * FROM participant WHERE confirmation_id = :confirmation_id';

@@ -30,12 +30,12 @@ function validateInput($data)
   return $data;
 }
 
-function searchQuery($eventId, $db)
+function updateQuery($confirmation_id, $db)
 {
   // $db=dbConnection();    
-  $stmt = $db->prepare('SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id JOIN event e ON p.event_id=e.id  WHERE event_id = :event_id');
+  $stmt = $db->prepare('SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id JOIN event e ON p.event_id=e.id  WHERE confirmation_id = :confirmation_id');
 
-  $stmt->bindValue(':event_id', $eventId, PDO::PARAM_INT);
+  $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
   $stmt->execute();
   $racers = $stmt->fetchAll(PDO::FETCH_ASSOC);
   return $racers;
@@ -46,11 +46,11 @@ if (isset($_POST['confirmation_id'])) {
   // This is just for testing to make sure we have the correct text
   //echo "<h1>" . $_POST['bookToFind'] . "</h1>";
   // Validate & sanitize the input
-  $searchRacers = validateInput($_POST['confirmation_id']);
+  $updateRacers = validateInput($_POST['confirmation_id']);
   // Now run the query to find the text in the database, and then save the results as a variable
-  $racerInfo = searchQuery($searchRacers, $db);
+  $racerInfo = updateQuery($updateRacers, $db);
   // Change the method name
-  // print_r($racers);
+  print_r($racerInfo);
 
 
 }
