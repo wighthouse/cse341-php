@@ -10,8 +10,8 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
 $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
 echo $event_id;
-$confirmation_id = createCode();
-echo $confirmation_id;
+// $confirmation_id = createCode();
+// echo $confirmation_id;
 //  $emailMatch = checkEmailMatch($email);
 
 //  // Check for existing email address in the table
@@ -105,7 +105,7 @@ if (isset($_POST)) {
         <li><strong>Name: </strong><?php echo $first_name . ' ' . $last_name ?></li>
         <li><strong>Email: </strong><?php echo $email ?></li>
         <li><strong>Event: </strong><?php echo $racers['event_name'] ?></li>
-        <li><strong>Shirt size: </strong><?php echo $racers['shirt_size'] ?></li>
+        <li><strong>Shirt size: </strong><?php echo $racers['size'] ?></li>
         <li><strong>Confirmation Code: </strong><?php echo $confirmation_id ?></li>
         <p>Please take note of your confirmation number. You will need it if you would like to modify your registration.</p>
 
