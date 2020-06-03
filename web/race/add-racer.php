@@ -1,17 +1,17 @@
 <?php
- require_once('functions.php');
- $db = get_db();
+require_once('functions.php');
+$db = get_db();
 print_r($_POST);
 
- // Filter and store the data
- $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
- $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
- $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
- $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
- $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
- echo $event_id;
- $confirmation_id=createCode();
- echo $confirmation_id;
+// Filter and store the data
+$first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
+$last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+$shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
+$event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
+echo $event_id;
+$confirmation_id = createCode();
+echo $confirmation_id;
 //  $emailMatch = checkEmailMatch($email);
 
 //  // Check for existing email address in the table
@@ -22,7 +22,7 @@ print_r($_POST);
 //    exit;
 //  }
 
- // Check for missing data
+// Check for missing data
 //  if (empty($first_name) || empty($last_name) || empty($$email) || empty($shirt_size_id) || empty($event_id)) {
 //    $message = '<p class="notify">Please provide information for all empty fields.</p>';
 //    $_SESSION['message'] = $message;
@@ -63,24 +63,26 @@ print_r($_POST);
 
 // }
 // If POST is set, then do the following
-if(isset($_POST)) {
+if (isset($_POST)) {
 
-    // Moved all this to a function.  Why?  Because we are going to have to do the same work on the scripturesStretchChallenge.php page
-    regRacer($first_name,
+  // Moved all this to a function.  Why?  Because we are going to have to do the same work on the scripturesStretchChallenge.php page
+  regRacer(
+    $first_name,
     $last_name,
     $email,
     $shirt_size_id,
-    $event_id);
+    $event_id
+  );
 
-    // Now redirect to the new page.  Technically you'd want to check if values were inserted, and if successfull redirect the user, but this works for now
-    // finally, redirect them to a new page to actually show the topics
-    
-    // header("Location: index.php");
+  // Now redirect to the new page.  Technically you'd want to check if values were inserted, and if successfull redirect the user, but this works for now
+  // finally, redirect them to a new page to actually show the topics
 
-    // die(); // we always include a die after redirects. In this case, there would be no
-           // harm if the user got the rest of the page, because there is nothing else
-           // but in general, there could be things after here that we don't want them
-           // to see.
+  // header("Location: index.php");
+
+  // die(); // we always include a die after redirects. In this case, there would be no
+  // harm if the user got the rest of the page, because there is nothing else
+  // but in general, there could be things after here that we don't want them
+  // to see.
 
 }
 $racers = getRacerInfo($confirmation_id);
@@ -107,19 +109,16 @@ print_r($racers);
     <div class="main-container">
       <h2 class="page-title">Registration Information</h2>
 
-      
-      <p>Here are your registration details: </p>
-      <ul>
-      <li><strong>Name: </strong><?php echo $first_name . ' ' . $last_name?></li>
-      <h3><?php echo $first_name?>, Here are your registration details.</h3><br/>
-      <li><strong>Email: </strong><?php echo $email ?></li>
-      <li><strong>Event: </strong><?php echo $racers['event_name']?></li>
-      <li><strong>Shirt size: </strong><?php echo $racers['shirt_size']?></li>
-      <li><strong>Confirmation Code: </strong><?php echo $confirmation_id?></li>
-      <p>Please take note of your confirmation number. You will need it if you would like to modify your registration.</p>
-      
 
-      ?>
+      <h3><?php echo $first_name ?>, Here are your registration details.</h3><br />
+      <ul>
+        <li><strong>Name: </strong><?php echo $first_name . ' ' . $last_name ?></li>
+        <li><strong>Email: </strong><?php echo $email ?></li>
+        <li><strong>Event: </strong><?php echo $racers['event_name'] ?></li>
+        <li><strong>Shirt size: </strong><?php echo $racers['shirt_size'] ?></li>
+        <li><strong>Confirmation Code: </strong><?php echo $confirmation_id ?></li>
+        <p>Please take note of your confirmation number. You will need it if you would like to modify your registration.</p>
+
     </div>
 
 
