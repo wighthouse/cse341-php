@@ -51,10 +51,7 @@
                 <a href="race-modify.php" class="button">Modify Registration</a>
             </form>
 
-            <?php
-            $confirmation_id=createCode();
-            print_r($confirmation_id); 
-            ?>
+           
 
         
         </div>

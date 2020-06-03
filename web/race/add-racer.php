@@ -84,7 +84,7 @@ if(isset($_POST)) {
 
 }
 $racers = getRacerInfo($confirmation_id);
-
+print_r($racers);
 ?>
 <!doctype html>
 <html lang="en">
