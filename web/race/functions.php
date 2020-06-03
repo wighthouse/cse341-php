@@ -167,7 +167,8 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
    function getRacerInfo($confirmation_id)
    {
        $db = get_db();
-       $sql = 'SELECT * FROM participant WHERE confirmation_id = :confirmation_id';
+       $sql = 'SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id 
+       JOIN event e ON p.event_id=e.id  WHERE confirmation_id = :confirmation_id';
        $stmt = $db->prepare($sql);
        $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
        $stmt->execute();

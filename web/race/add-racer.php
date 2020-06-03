@@ -83,6 +83,7 @@ if(isset($_POST)) {
            // to see.
 
 }
+$racers = getRacerInfo($confirmation_id);
 
 ?>
 <!doctype html>
@@ -107,7 +108,7 @@ if(isset($_POST)) {
       <h2 class="page-title">Add Racer</h2>
 
       <?php
-      echo "<h3>{$racers[0]['first_name']}, thank you for registering.</h3><br/>";
+      echo "<h3>{$first_name}, thank you for registering.</h3><br/>";
       echo "<p>Here are your registration details:</p>";
       echo "<ul>";
       echo "<li><strong>Name: </strong>" . $first_name . " " . $last_name ."</li>";
