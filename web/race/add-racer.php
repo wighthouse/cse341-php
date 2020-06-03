@@ -92,7 +92,7 @@ print_r($racers);
 <head>
   <meta charset="utf-8">
 
-  <title>CTE341 | Web Backend Development II | Add Racer</title>
+  <title>CTE341 | Web Backend Development II | Registration Info</title>
 
   <link rel="stylesheet" href="css/race.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
@@ -105,17 +105,18 @@ print_r($racers);
   </header>
   <main>
     <div class="main-container">
-      <h2 class="page-title">Add Racer</h2>
+      <h2 class="page-title">Registration Information</h2>
 
-      <?php
-      echo "<h3>{$first_name}, thank you for registering.</h3><br/>";
-      echo "<p>Here are your registration details:</p>";
-      echo "<ul>";
-      echo "<li><strong>Name: </strong>" . $first_name . " " . $last_name ."</li>";
-      echo "<li><strong>Email: </strong>" . $email ."</li>";
-      echo "<li><strong>Event: </strong>" . $racers['event_name'] ."</li>";
-      echo "<li><strong>Shirt size: </strong>" . $racers['shirt_size'] ."</li>";
-      echo "<li><strong>Confirmation Code: </strong>" . $confirmation_id ."</li>";
+      
+      <p>Here are your registration details: </p>
+      <ul>
+      <li><strong>Name: </strong><?php echo $first_name . ' ' . $last_name?></li>
+      <h3><?php echo $first_name?>, Here are your registration details.</h3><br/>
+      <li><strong>Email: </strong><?php echo $email ?></li>
+      <li><strong>Event: </strong><?php echo $racers['event_name']?></li>
+      <li><strong>Shirt size: </strong><?php echo $racers['shirt_size']?></li>
+      <li><strong>Confirmation Code: </strong><?php echo $confirmation_id?></li>
+      <p>Please take note of your confirmation number. You will need it if you would like to modify your registration.</p>
       
 
       ?>
