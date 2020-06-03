@@ -109,7 +109,7 @@ echo $rowsChanged;
       <h2 class="page-title">Update Racer</h2>
 
       <?php
-      echo "<h3>{$racers[0]['first_name']}'s Registration Updated</h3><br/>";
+      echo "<h3>" . $racers['first_name'] . "'s Registration Updated</h3><br/>";
       foreach ($racers as $row) {
         echo "<strong>" . $row['participant_first_name'] . ' ' . $row['participant_last_name'] . '</strong>';
 
