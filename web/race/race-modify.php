@@ -106,7 +106,7 @@ if (isset($_POST['confirmation_id'])) {
                     echo $sizeList; ?></label>
                 <input type="submit" name="submit" class="button" value="Update Registration">
                 <!-- Add the action name - value pair -->
-                <input type="hidden" name="action" value="update-racerInfo">
+                <input type="hidden" name="action" value="updateRacer">
                 <input type="hidden" name="confirmation_id" value="<?php if (isset($confirmation_id)) {
                                                                 echo $confirmation_id;
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
