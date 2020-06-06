@@ -134,7 +134,7 @@ h3 {
 
 main {
     max-width: 1020px;
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 385px);
     margin: auto;
 }
 
@@ -216,6 +216,7 @@ footer {
     font-size: .8em;
     color: #50006d;
     text-align: center;
+    justify-content: center;
 }
 
 .assignments {
