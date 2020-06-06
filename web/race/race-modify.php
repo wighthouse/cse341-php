@@ -72,6 +72,7 @@ if (isset($_POST['confirmation_id'])) {
 <body>
   <header>
     <?php include '../Homepage/php/header.php'; ?>
+    <?php include '../race/common/header.php'; ?>
   </header>
   <main>
     <div class="main-container">

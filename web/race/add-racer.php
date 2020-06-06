@@ -94,6 +94,7 @@ if (isset($_POST)) {
 <body>
   <header>
     <?php include '../Homepage/php/header.php'; ?>
+    <?php include '../race/common/header.php'; ?>
   </header>
   <main>
     <div class="main-container">
