@@ -18,7 +18,7 @@ print_r($_POST);
 if(isset($_POST)) {
 
     // Moved all this to a function.  Why?  Because we are going to have to do the same work on the scripturesStretchChallenge.php page
-    updateRacer($first_name,
+    $rowsChanged =updateRacer($first_name,
     $last_name,
     $email,
     $shirt_size_id,
@@ -61,14 +61,11 @@ echo $rowsChanged;
       <h2 class="page-title">Update Racer</h2>
 
       <?php
-      echo "<h3>" . $racers['first_name'] . "'s Registration Updated</h3><br/>";
-      foreach ($racers as $row) {
-        echo "<strong>" . $row['participant_first_name'] . ' ' . $row['participant_last_name'] . '</strong>';
+      echo "<h3>" . $first_name . "'s Registration Updated</h3><br/>";?>
+      
+      
 
-        echo '<br/><br/>';
-      }
-
-      ?>
+      
     </div>
 
 
