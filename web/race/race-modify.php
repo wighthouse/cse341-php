@@ -98,7 +98,7 @@ if (isset($_POST['confirmation_id'])) {
                                                                                             } ?>></label>
                 <label class="above">Race<?php
                     $events= getEvents();
-                    $eventList = buildEventList($events);
+                    $eventList = buildEventList2($events, $racerInfo);
                     echo $eventList; ?></label>
                 <label class="above">Shirt<?php
                     $sizes= getShirtSizes();

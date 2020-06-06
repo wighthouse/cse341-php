@@ -208,7 +208,7 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
        
    }
 
-   //Build the drop-down event select list
+   //Build the MODIFY drop-down event select list
 function buildShirtSizeList2($sizes, $racerInfo){
   $sizeList = "<select id='shirt_size_id' name='shirt_size_id'>";
   $sizeList .= "<option value='' selected disabled>Select a Size</option>";
@@ -222,3 +222,16 @@ function buildShirtSizeList2($sizes, $racerInfo){
   return $sizeList;
   
 }
+//Build the MODIFY drop-down event select list
+function buildEventList2($events, $racerInfo){
+  $eventList = "<select id='event_id' name='event_id'>";
+  $eventList .= "<option value='' selected disabled>Select an Event</option>";
+  foreach ($events as $event) {
+    if ($event['id']==$racerInfo['event_id']) {
+      $eventList .= "<option value='$event[id] selected'>$event[event_name]</option>";
+  } else {
+    $eventList .= "<option value='$event[id]'>$event[event_name]</option>";
+  }}
+  $eventList .= "</select>";
+  return $eventList;
+  }
