@@ -21,7 +21,7 @@ $db = get_db();
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Hennepin County Peanuts Run</br>Registration Information Page</h2>
+            <h2 class="page-title">Registration Information Page</h2>
 
 
         </div>

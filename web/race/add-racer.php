@@ -115,7 +115,7 @@ if (isset($_POST)) {
   </main>
 
   <footer>
-  <?php include '../race-footer.phprace-footer.php'; ?>
+  <?php include '../race/common/race-footer.php'; ?>
   </footer>
 </body>
 
