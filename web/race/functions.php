@@ -94,6 +94,7 @@ function buildShirtSizeList($sizes){
   $sizeList = "<select id='shirt_size_id' name='shirt_size_id'>";
   $sizeList .= "<option value='' selected disabled>Select a Size</option>";
   foreach ($sizes as $size) {
+  
     $sizeList .= "<option value='$size[id]'>$size[size]</option>";
   }
   $sizeList .= "</select>";
@@ -206,3 +207,18 @@ function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
        return $rowsChanged;
        
    }
+
+   //Build the drop-down event select list
+function buildShirtSizeList2($sizes, $racerInfo){
+  $sizeList = "<select id='shirt_size_id' name='shirt_size_id'>";
+  $sizeList .= "<option value='' selected disabled>Select a Size</option>";
+  foreach ($sizes as $size) {
+    if ($size['id']==$racerInfo['shirt_size_id']) {
+      $sizeList .= "<option value='$size[id]' selected>$size[size]</option>";
+  } else {
+         $sizeList .= "<option value='$size[id]'>$size[size]</option>";
+  }}
+  $sizeList .= "</select>";
+  return $sizeList;
+  
+}

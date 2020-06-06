@@ -102,7 +102,7 @@ if (isset($_POST['confirmation_id'])) {
                     echo $eventList; ?></label>
                 <label class="above">Shirt<?php
                     $sizes= getShirtSizes();
-                    $sizeList = buildShirtSizeList($sizes);
+                    $sizeList = buildShirtSizeList2($sizes, $racerInfo);
                     echo $sizeList; ?></label>
                 <input type="submit" name="submit" class="button" value="Update Registration">
                 <!-- Add the action name - value pair -->
