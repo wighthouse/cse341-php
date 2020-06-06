@@ -11,7 +11,7 @@ print_r($_POST);
  $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
  $confirmation_id = filter_input(INPUT_POST, 'confirmation_id', FILTER_SANITIZE_STRING);
  echo $event_id;
- 
+ echo $shirt_size_id;
  echo $confirmation_id;
 //  $emailMatch = checkEmailMatch($email);
 
