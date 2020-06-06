@@ -21,5 +21,5 @@
                 <li><a href="/race/race-modify.php">Modify</a></li>
             </ul>
         </div>
-    </nav><div class="image-container"></div>
+    </nav>
 </div>

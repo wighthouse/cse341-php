@@ -202,8 +202,7 @@ figcaption p {
 }
 
 footer {
-    height: 75px;
-    background-color: rgb(80, 0, 109, .6);
+    min-height: 75px;
     width: 100%;
     margin: 0;
     /* position: absolute;
