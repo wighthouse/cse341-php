@@ -228,7 +228,7 @@ function buildEventList2($events, $racerInfo){
   $eventList .= "<option value='' selected disabled>Select an Event</option>";
   foreach ($events as $event) {
     if ($event['id']==$racerInfo['event_id']) {
-      $eventList .= "<option value='$event[id] selected'>$event[event_name]</option>";
+      $eventList .= "<option value='$event[id]' selected>$event[event_name]</option>";
   } else {
     $eventList .= "<option value='$event[id]'>$event[event_name]</option>";
   }}
