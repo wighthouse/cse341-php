@@ -23,7 +23,7 @@ h3 {
 }
 
 .top-border {
-    height: 50px;
+    height: 75px;
     width: 100%;
     margin-top: 0px;
     background-color: rgb(80, 0, 109, .6);
@@ -38,7 +38,7 @@ h3 {
 }
 
 .sub-border {
-    height: 50px;
+    height: 75px;
     width: 100%;
     margin-top: 0px;
     background-color: rgb(235, 235, 47, .6);
