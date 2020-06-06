@@ -33,7 +33,7 @@ function getEvents(){
     // Create a connection object from the connection function
     $db = get_db(); 
     // The SQL statement to be used with the database 
-    $sql = 'SELECT event_name, id FROM public.event ORDER BY event_name ASC'; 
+    $sql = 'SELECT event_name, id FROM public.event ORDER BY id ASC'; 
     // The next line creates the prepared statement using the db connection      
     $stmt = $db->prepare($sql);
     // The next line runs the prepared statement 
