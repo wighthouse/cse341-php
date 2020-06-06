@@ -33,7 +33,7 @@ h3 {
     height: 75px;
     width: 100%;
     margin-top: 0px;
-    background-color: rgb(235, 235, 47);
+    background-color: rgb(235, 235, 47, .6);
 }
 
 .nav-container {
@@ -48,12 +48,13 @@ h3 {
 }
 
 .sub-nav-container h1 {
-    color: #ffffff;
+    color: #50006d;
     padding: 15px 0;
     float: left;
 }
 
-.header-nav ul {
+.header-nav ul,
+.sub-header-nav ul {
     list-style: none;
     overflow: hidden;
     padding: 25px 0;
