@@ -1,3 +1,17 @@
+<div class="top-border"></div>
+        
+        <nav class="header-nav">
+            <div class="nav-container">
+                <h1>CTE 341 - Web Backend Development II</h1>
+                <ul>
+                    <li><a href="/Homepage/index.php">Home</a></li>
+                    <li><a href="/Homepage/assignments.php">Assignments</a></li>
+                    <li><a href="/race/index.php">Project</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
 <div class="sub-border"></div>
         
         <nav class="sub-header-nav">

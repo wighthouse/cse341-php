@@ -93,8 +93,7 @@ if (isset($_POST)) {
 
 <body>
   <header>
-    <?php include '../Homepage/php/header.php'; ?>
-    <?php include '../race/common/header.php'; ?>
+    <?php include '../race/common/race-header.php'; ?>
   </header>
   <main>
     <div class="main-container">
@@ -116,7 +115,7 @@ if (isset($_POST)) {
   </main>
 
   <footer>
-    <?php include '../Homepage/php/footer.php'; ?>
+  <?php include '../race-footer.phprace-footer.php'; ?>
   </footer>
 </body>
 
