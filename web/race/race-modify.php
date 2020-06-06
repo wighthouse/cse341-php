@@ -107,10 +107,10 @@ if (isset($_POST['confirmation_id'])) {
                 <input type="submit" name="submit" class="button" value="Update Registration">
                 <!-- Add the action name - value pair -->
                 <input type="hidden" name="action" value="update-racerInfo">
-                <input type="hidden" name="id" value="<?php if (isset($racerInfo['id'])) {
-                                                                echo $racerInfo['id'];
-                                                            } elseif (isset($id)) {
-                                                                echo $id;
+                <input type="hidden" name="id" value="<?php if (isset($confimation_id)) {
+                                                                echo $confirmation_id;
+                                                            } elseif (isset($racerInfo['confirmation_id'])) {
+                                                              echo $racerInfo['confirmation_id'];
                                                             } ?>">
 
                 <a href="index.php" class="button">Cancel</a>
