@@ -11,7 +11,7 @@
     </nav>
 </div>
 
-<div class="sub-border"><div class="image-container">
+<div class="sub-border">
     <nav class="sub-header-nav">
         <div class="sub-nav-container">
             <h1>Hennepin County Peanuts Run</h1>
@@ -21,5 +21,5 @@
                 <li><a href="/race/race-modify.php">Modify</a></li>
             </ul>
         </div>
-    </nav></div>
+    </nav><div class="image-container"></div>
 </div>
