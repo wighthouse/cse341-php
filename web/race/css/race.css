@@ -36,7 +36,8 @@ h3 {
     background-color: rgb(235, 235, 47, .6);
 }
 
-.nav-container {
+.nav-container,
+.sub-nav-container {
     max-width: 1020px;
     margin: auto;
 }
@@ -61,7 +62,8 @@ h3 {
     float: right;
 }
 
-.header-nav ul li {
+.header-nav ul li,
+.sub-header-nav ul li {
     padding-right: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -85,6 +87,25 @@ h3 {
 
 .header-nav ul li a:active {
     color: yellow;
+}
+
+.sub-header-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #50006d;
+    opacity: 1;
+}
+
+.sub-header-nav ul li a:visited {
+    color: #50006d;
+}
+
+.sub-header-nav ul li a:hover {
+    color: #ffffff;
+}
+
+.sub-header-nav ul li a:active {
+    color: green;
 }
 
 .current {
