@@ -8,6 +8,7 @@
                     <li><a href="/race/index.php">Project</a></li>
                 </ul>
             </div>
+<div class="image-container"></div>
         </nav></div>
 <div class="sub-border">
         <nav class="sub-header-nav">
