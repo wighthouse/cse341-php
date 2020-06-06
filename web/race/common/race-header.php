@@ -10,8 +10,8 @@
         </div>
     </nav>
 </div>
-<div class="image-container"></div>
-<div class="sub-border">
+
+<div class="sub-border"><div class="image-container"></div>
     <nav class="sub-header-nav">
         <div class="sub-nav-container">
             <h1>Hennepin County Peanuts Run</h1>
