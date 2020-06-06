@@ -1,4 +1,4 @@
-<div class="top-border"></div>
+<div class="top-border">
         
         <nav class="header-nav">
             <div class="nav-container">
@@ -11,8 +11,8 @@
 
                 </ul>
             </div>
-        </nav>
-<div class="sub-border"></div>
+        </nav></div>
+<div class="sub-border">
         
         <nav class="sub-header-nav">
             <div class="sub-nav-container">
@@ -25,4 +25,4 @@
 
                 </ul>
             </div>
-        </nav>
+        </nav></div>
