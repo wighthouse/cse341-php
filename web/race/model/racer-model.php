@@ -24,23 +24,23 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
 $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
 
-$emailMatch = checkEmailMatch($email);
+// $emailMatch = checkEmailMatch($email);
 
-// Check for existing email address in the table
-if ($emailMatch) {
-  $message = '<p class="notify">That email address already exists. Do you want to modify your registration instead?</p>';
-  $_SESSION['message'] = $message;
-  include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/login.php';
-  exit;
-}
+// // Check for existing email address in the table
+// if ($emailMatch) {
+//   $message = '<p class="notify">That email address already exists. Do you want to modify your registration instead?</p>';
+//   $_SESSION['message'] = $message;
+//   include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/login.php';
+//   exit;
+// }
 
-// Check for missing data
-if (empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword)) {
-  $message = '<p class="notify">Please provide information for all empty fields.</p>';
-  $_SESSION['message'] = $message;
-  include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/registration.php';
-  exit;
-}
+// // Check for missing data
+// if (empty($clientFirstname) || empty($clientLastname) || empty($clientEmail) || empty($checkPassword)) {
+//   $message = '<p class="notify">Please provide information for all empty fields.</p>';
+//   $_SESSION['message'] = $message;
+//   include $_SERVER['DOCUMENT_ROOT'] . '/acme/view/registration.php';
+//   exit;
+// }
 
 /*This function will handle site registrations.*/
 function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
