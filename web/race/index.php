@@ -49,8 +49,8 @@ switch ($action) {
         if ($regResult === 1) {
             $message = "<p class='notify'>You have successfully registered.</p>";
             $_SESSION['message'] = $message;
-            $racers = getRacerInfo($confirmation_id);
-            include '../race/views/add-racer';
+            $racer = getRacerInfo($confirmation_id);
+            include '../race/views/add-racer.php';
             exit;
           } else {
             $message = "<p>Sorry, the registration was not successful. Please try again.</p>";
