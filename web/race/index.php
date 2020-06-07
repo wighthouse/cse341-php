@@ -39,7 +39,7 @@ switch ($action) {
         $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
     
         //Attempt the insert
-        $regResults= regRacer(
+        $regResult= regRacer(
             $first_name,
             $last_name,
             $email,
