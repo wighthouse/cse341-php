@@ -56,7 +56,7 @@
                     $sizes= getShirtSizes();
                     $sizeList = buildShirtSizeList2($sizes, $racerInfo);
                     echo $sizeList; ?></label>
-                 <label class="above">Confirmation ID<input type="text" name="confirmation_id" value="<?php if (isset($confirmation_id)) {
+                 <label class="above">Confirmation ID<input type="text" name="confirmation_id" disabled value="<?php if (isset($confirmation_id)) {
                                                                 echo $confirmation_id;
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
                                                               echo $racerInfo['confirmation_id'];

@@ -64,7 +64,7 @@ switch ($action) {
         break;
         
     case 'race-modify':
-        $updateRacers = validateInput($_POST['confirmation_id']);
+        $updateRacers = validateInput($_GET['confirmation_id']);
         // Now run the query to find the text in the database, and then save the results as a variable
         $racerInfo = updateQuery($updateRacers, $db);
         // Change the method name
