@@ -27,6 +27,7 @@ switch ($action) {
 
     case 'race-registration':
 
+        include '../race/views/race-registration.php';
         break;
 
     case 'add-racer':

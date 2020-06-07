@@ -38,7 +38,7 @@ $db = get_db();
         <div class="main-form register">
             <h3>Register for an event.</h3>
 
-            <a href="race-registration.php" class="button">Go to Registration Page</a>
+            <a href="/race/index.php?action=race-registration" class="button">Go to Registration Page</a>
         </div>
 
         <div class="main-form modify">
