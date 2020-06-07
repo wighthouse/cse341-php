@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL); ini_set('display_errors', 1);
  require_once('../race/model/functions.php');
  require_once('../race/model/racer-model.php');
  $db = get_db();

@@ -64,7 +64,8 @@
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
                                                               echo $racerInfo['confirmation_id'];
                                                             } ?>">
-<a href="delete-registration.php?action=delete-registration" class='button warning' title='Click to delete'>Delete</a>
+<p>Click <span id='delete'>Delete<span> to return without making changes.</p>
+<a href="/race/index.php?action=delete-registration" class='button warning' title='Click to delete'>Delete</a>
 <p>Click cancel to return without making changes.</p>
                 <a href="/race/index.php" class="button cancel">Cancel</a>
             </form>
