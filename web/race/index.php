@@ -81,7 +81,7 @@ switch ($action) {
 
     default: 
     
-        include ('../race/views/home.php');
+        include('../race/views/home.php');
 }
 
 
