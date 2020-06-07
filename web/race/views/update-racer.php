@@ -14,7 +14,7 @@ echo $confirmation_id;
 <head>
   <meta charset="utf-8">
 
-  <title>CTE341 | Web Backend Development II | Update Racer</title>
+  <title>CTE341 | Web Backend Development II | Registration Details</title>
 
   <link rel="stylesheet" href="css/race.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&Oswald&display=swap" rel="stylesheet">
@@ -27,10 +27,10 @@ echo $confirmation_id;
   </header>
   <main>
     <div class="main-container">
-      <h2 class="page-title">Update Racer</h2>
+      <h2 class="page-title">Registraion Details</h2>
 
       
-      <h3><?php $first_name?>'s Updated Registration</h3>
+      <h3><?php echo $first_name?>'s Updated Registration</h3>
       <p>Name: <?php echo $first_name . " " . $last_name?></p>
       <p>Email: <?php echo $email?></p> 
       <p>Event: <?php echo $event_name?></p>
