@@ -42,9 +42,10 @@ $db = get_db();
         </div>
 
         <div class="main-form modify">
-            <form class="formContainer" action="race-modify.php" method="post">
+            <form class="formContainer" action="/race/index.php" method="post">
                 <h3 class="formHeading">Modify your Registration</h3>
                 <label class="above">Confirmation Id*<input type="text" name="confirmation_id" required></label>
+                <input type="hidden" name="action" value="race-modify">
                 <input type="submit" name="submit" class="button" value="Modify">
         </div>
     </main>
