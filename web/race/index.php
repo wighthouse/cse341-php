@@ -2,17 +2,17 @@
 //This is the Race Controller
 
  // Create or access a Session 
- session_start();
+//  session_start();
 
  require_once('../race/model/functions.php');
  require_once('../race/model/racer-model.php');
 
  $db = get_db(); 
 
-$action = filter_input(INPUT_POST, 'action');
-if ($action == NULL) {
-  $action = filter_input(INPUT_GET, 'action');
-}
+// $action = filter_input(INPUT_POST, 'action');
+// if ($action == NULL) {
+//   $action = filter_input(INPUT_GET, 'action');
+// }
 
 
 switch ($action) {
@@ -94,4 +94,3 @@ switch ($action) {
 //exit;
 
 
-?>
