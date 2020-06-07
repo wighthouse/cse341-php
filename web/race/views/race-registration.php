@@ -22,7 +22,7 @@
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Hennepin County Peanuts Run</br>Race Registration Page</h2>
+            <h2 class="page-title">Race Registration</h2>
 
           
         <div class="main-form register">
@@ -50,7 +50,7 @@
                 <!-- Add the action name - value pair -->
                 <!-- <input type="hidden" name="action" value="register-racer"> -->
                 <h3>Already registered, and need to change something? Modify your registration, instead.</h3>
-                <a href="/race/index.php?action=race-modify" class="button">Modify Registration</a>
+                <a href="/race/index.php" class="button">Return to Home</a>
             </form>
 
            
