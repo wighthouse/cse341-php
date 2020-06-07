@@ -3,6 +3,16 @@
  $db = get_db();
 print_r($_POST);
 
+
+$action = filter_input(INPUT_POST, 'action');
+
+if ($action == NULL) {
+  $action = filter_input(INPUT_GET, 'action');
+}
+
+switch ($action) {
+  case 'updateRacer':
+
  // Filter and store the data
  $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
  $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
@@ -24,20 +34,23 @@ if(isset($_POST)) {
     $shirt_size_id,
     $event_id,
     $confirmation_id);
-
-    // Now redirect to the new page.  Technically you'd want to check if values were inserted, and if successfull redirect the user, but this works for now
-    // finally, redirect them to a new page to actually show the topics
-    
-    // header("Location: index.php");
-
-    // die(); // we always include a die after redirects. In this case, there would be no
-    //        // harm if the user got the rest of the page, because there is nothing else
-    //        // but in general, there could be things after here that we don't want them
-    //        // to see.
-
 }
 echo $rowsChanged;
 
+
+case 'delete':
+  $confirmation_id = filter_input(INPUT_GET, 'confirmation_id', FILTER_SANITIZE_STRING);
+  $first_name = filter_input(INPUT_GET, 'first_name', FILTER_SANITIZE_STRING);
+  $deleteResult = deleteRegistration($confirmation_id);
+  if ($deleteResult) {
+    $message = "<p class='notify'>$first_name was successfully deleted.</p>";
+echo $message;
+  }
+
+  case 'default':
+    header("Location: index.php");
+    exit;
+}
 ?>
 <!doctype html>
 <html lang="en">
