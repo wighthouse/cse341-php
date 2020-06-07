@@ -14,13 +14,7 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
   $action = filter_input(INPUT_GET, 'action');
 }
-function validateInput($data)
-{
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+
 
 switch ($action) {
     case 'race-query':
