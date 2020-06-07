@@ -14,7 +14,13 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
   $action = filter_input(INPUT_GET, 'action');
 }
-
+function validateInput($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 switch ($action) {
     case 'race-query':
@@ -35,7 +41,10 @@ switch ($action) {
         break;
         
     case 'race-modify':
-
+        $updateRacers = validateInput($_POST['confirmation_id']);
+        // Now run the query to find the text in the database, and then save the results as a variable
+        $racerInfo = updateQuery($updateRacers, $db);
+        // Change the method name
         break;  
         
     case 'updateRacer':

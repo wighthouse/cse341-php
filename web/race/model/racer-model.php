@@ -94,3 +94,14 @@ function deleteRegistration($confirmation_id){
   // Return the indication of success (rows changed)
   return $rowsChanged;
 }
+
+function updateQuery($confirmation_id, $db)
+{
+  // $db=dbConnection();    
+  $stmt = $db->prepare('SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id JOIN event e ON p.event_id=e.id  WHERE confirmation_id = :confirmation_id');
+
+  $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
+  $stmt->execute();
+  $racers = $stmt->fetch(PDO::FETCH_ASSOC);
+  return $racers;
+}

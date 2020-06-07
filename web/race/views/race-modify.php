@@ -2,59 +2,12 @@
  require_once('../race/model/functions.php');
  require_once('../race/model/racer-model.php');
  $db = get_db();
-// try {
-//   $dbUrl = getenv('DATABASE_URL');
 
-//   $dbOpts = parse_url($dbUrl);
-
-//   $dbHost = $dbOpts["host"];
-//   $dbPort = $dbOpts["port"];
-//   $dbUser = $dbOpts["user"];
-//   $dbPassword = $dbOpts["pass"];
-//   $dbName = ltrim($dbOpts["path"], '/');
-
-//   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-//   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch (PDOException $ex) {
-//   echo 'Error!: ' . $ex->getMessage();
-//   die();
-// }
-
-
-
-function validateInput($data)
-{
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-function updateQuery($confirmation_id, $db)
-{
-  // $db=dbConnection();    
-  $stmt = $db->prepare('SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id JOIN event e ON p.event_id=e.id  WHERE confirmation_id = :confirmation_id');
-
-  $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
-  $stmt->execute();
-  $racers = $stmt->fetch(PDO::FETCH_ASSOC);
-  return $racers;
-}
-
-// If the page loads as a POST request, look for this variable, and if it is set
-if (isset($_POST['confirmation_id'])) {
-  // This is just for testing to make sure we have the correct text
-  //echo "<h1>" . $_POST['bookToFind'] . "</h1>";
-  // Validate & sanitize the input
-  $updateRacers = validateInput($_POST['confirmation_id']);
-  // Now run the query to find the text in the database, and then save the results as a variable
-  $racerInfo = updateQuery($updateRacers, $db);
-  // Change the method name
+ 
   print_r($racerInfo);
 
 
-}
+
 
 ?>
 <!doctype html>
