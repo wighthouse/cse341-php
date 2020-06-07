@@ -25,7 +25,25 @@ try
     return $db;
   }
 
+  function validateInput($data)
+  {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+  
 
+  function searchQuery($eventId, $db)
+  {
+    // $db=dbConnection();    
+    $stmt = $db->prepare('SELECT * FROM participant p JOIN shirt_size s ON p.shirt_size_id=s.id JOIN event e ON p.event_id=e.id  WHERE event_id = :event_id');
+  
+    $stmt->bindValue(':event_id', $eventId, PDO::PARAM_INT);
+    $stmt->execute();
+    $racers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $racers;
+  }
 
 
 
@@ -64,9 +82,10 @@ function buildEventList($events){
   function search() {
     $events= getEvents();
     $eventList = buildEventList($events);
-    echo "<form method='post' action='race-query-results.php'>";
+    echo "<form method='post' action='../race/index.php'>";
     echo $eventList;
    
+    echo "<input type='hidden' name='action' value='race-query'>";
     echo "<input type='submit' value='Search'>";
     echo "</form>";
 }
