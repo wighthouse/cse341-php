@@ -94,7 +94,7 @@ if ($updateResult === 1) {
     header('location: ../race/views/update-racer');
     exit;
   } else {
-    $message = "<p>Sorry, the product was not updated. Please try again.</p>";
+    $message = "<p>Sorry, the registration was not updated. Please try again.</p>";
     $_SESSION['message'] = $message;
   }
   include '../race/views/race-modify.php';
@@ -107,8 +107,12 @@ break;
         $first_name = filter_input(INPUT_GET, 'first_name', FILTER_SANITIZE_STRING);
         $deleteResult = deleteRegistration($confirmation_id);
         if ($deleteResult) {
-          $message = "<p class='notify'>$first_name was successfully deleted.</p>";
+          $message = "<p class='notify'>$first_name's registration was successfully deleted.</p>";
           $_SESSION['message'] = $message;
+          include '../race/views/home.php';
+        }else {
+            $message = "<p>Sorry, the registration was not deleted. Please try again.</p>";
+            $_SESSION['message'] = $message;
         }
         break; 
         
