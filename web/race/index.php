@@ -81,7 +81,7 @@ break;
 
     default: 
     
-        include('../race/views/home.php');
+        include '../race/views/home.php';
 }
 
 
