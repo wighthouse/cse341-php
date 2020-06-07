@@ -92,7 +92,7 @@ if ($updateResult === 1) {
 
     $message = "<p class='notify'>You have successfully updated $first_name's registration.</p>";
     $_SESSION['message'] = $message;
-    include '../race/views/update-racer';
+    include '../race/views/update-racer.php';
     exit;
   } else {
     $message = "<p>Sorry, the registration was not updated. Please try again.</p>";
