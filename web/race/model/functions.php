@@ -151,38 +151,6 @@ function createCode() {
 
 
 
-/*This function will handle site registrations.*/
-function regRacer($first_name, $last_name, $email, $shirt_size_id, $event_id)
-{
-
-    // Create a connection object using the acme connection function
-    $db = get_db();
-    $confirmation_id = "";
-    $confirmation_id =createCode();
-    // The SQL statement
-    $sql = 'INSERT INTO participant (first_name, last_name, email, shirt_size_id, event_id, confirmation_id)
-     VALUES (:first_name, :last_name, :email, :shirt_size_id, :event_id, :confirmation_id)';
-    // Create the prepared statement using the acme connection
-    $stmt = $db->prepare($sql);
-    // The next four lines replace the placeholders in the SQL
-    // statement with the actual values in the variables
-    // and tells the database the type of data it is
-    $stmt->bindValue(':first_name', $first_name, PDO::PARAM_STR);
-    $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
-    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
-    $stmt->bindValue(':shirt_size_id', $shirt_size_id, PDO::PARAM_INT);
-    $stmt->bindValue(':event_id', $event_id, PDO::PARAM_INT);
-    $stmt->bindValue(':confirmation_id', $confirmation_id, PDO::PARAM_STR);
-    // Insert the data
-    $stmt->execute();
-    // Ask how many rows changed as a result of our insert
-    $rowsChanged = $stmt->rowCount();
-    // Close the database interaction
-    $stmt->closeCursor();
-    // Return the indication of success (rows changed)
-    return $rowsChanged;
-}
-
    // Get client information by confirmation_id<>
    function getRacerInfo($confirmation_id)
    {

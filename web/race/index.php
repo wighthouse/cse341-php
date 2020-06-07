@@ -2,8 +2,8 @@
 error_reporting(E_ALL); ini_set('display_errors', 1);
 //This is the Race Controller
 
- // Create or access a Session 
-//  session_start();
+ //Create or access a Session 
+ session_start();
 
  require_once('../race/model/functions.php');
  require_once('../race/model/racer-model.php');
