@@ -56,14 +56,19 @@
                     $sizes= getShirtSizes();
                     $sizeList = buildShirtSizeList2($sizes, $racerInfo);
                     echo $sizeList; ?></label>
-                <input type="submit" name="submit" class="button" value="Update Registration">
-                <!-- Add the action name - value pair -->
-                <input type="hidden" name="action" value="update-racer">
-                <input type="hidden" name="confirmation_id" value="<?php if (isset($confirmation_id)) {
+                 <label class="above">Confirmation ID<input type="text" name="confirmation_id" value="<?php if (isset($confirmation_id)) {
                                                                 echo $confirmation_id;
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
                                                               echo $racerInfo['confirmation_id'];
-                                                            } ?>">
+                                                            } ?>">   
+                <input type="submit" name="submit" class="button" value="Update Registration">
+                <!-- Add the action name - value pair -->
+                <input type="hidden" name="action" value="update-racer">
+                <!-- <input type="hidden" name="confirmation_id" value="<?php if (isset($confirmation_id)) {
+                                                                echo $confirmation_id;
+                                                            } elseif (isset($racerInfo['confirmation_id'])) {
+                                                              echo $racerInfo['confirmation_id'];
+                                                            } ?>"> -->
 <p>Click <span id='delete'>Delete<span> to return without making changes.</p>
 <a href="/race/index.php?action=delete-registration" class='button warning' title='Click to delete'>Delete</a>
 <p>Click cancel to return without making changes.</p>

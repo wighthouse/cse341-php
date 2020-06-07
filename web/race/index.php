@@ -112,7 +112,7 @@ break;
         if ($deleteResult) {
           $message = "<p class='notify'>$first_name's registration was successfully deleted.</p>";
           $_SESSION['message'] = $message;
-          include '../race/views/update-racer.php';
+          include '../race/views/delete-confirmation.php';
         }else {
             $updateRacers = validateInput($_POST['confirmation_id']);
         // Now run the query to find the text in the database, and then save the results as a variable
