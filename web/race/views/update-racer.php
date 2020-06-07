@@ -1,12 +1,10 @@
 <?php
-error_reporting(E_ALL); ini_set('display_errors', 1);
- require_once('../race/model/functions.php');
- require_once('../race/model/racer-model.php');
- $db = get_db();
-print_r($_POST);
-echo $event_id;
-echo $shirt_size_id;
-echo $confirmation_id;
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once('../race/model/functions.php');
+require_once('../race/model/racer-model.php');
+$db = get_db();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,30 +21,32 @@ echo $confirmation_id;
 
 <body>
   <header>
-  <?php include '../race/common/race-header.php'; ?>
+    <?php include '../race/common/race-header.php'; ?>
   </header>
   <main>
     <div class="main-container">
-      <h2 class="page-title">Registraion Details</h2>
+      <h2 class="page-title">Registration Details</h2>
 
-      
-      <h3><?php echo $first_name?>'s Updated Registration</h3>
-      <p>Name: <?php echo $first_name . " " . $last_name?></p>
-      <p>Email: <?php echo $email?></p> 
-      <p>Event: <?php echo $event_name?></p>
-      <p>Shirt size: <?php echo $shirt_size?></p>
 
-      
-      
+      <h3><?php echo $first_name ?>'s Updated Registration</h3>
+      <ul>
+        <li><strong>Name: </strong><?php echo $first_name . ' ' . $last_name ?></li>
+        <li><strong>Email: </strong><?php echo $email ?></li>
+        <li><strong>Event: </strong><?php echo $racers['event_name'] ?></li>
+        <li><strong>Shirt size: </strong><?php echo $racers['size'] ?></li>
+        <li><strong>Confirmation Code: </strong><?php echo $confirmation_id ?></li>
+      </ul>
+      <p>Your confirmation number has not changed. You will need it if you would like to modify your registration.</p>
 
-      
+
+
     </div>
 
 
   </main>
 
   <footer>
-  <?php include '../race/common/race-footer.php'; ?>
+    <?php include '../race/common/race-footer.php'; ?>
   </footer>
 </body>
 

@@ -50,13 +50,13 @@ switch ($action) {
             $message = "<p class='notify'>You have successfully registered.</p>";
             $_SESSION['message'] = $message;
             $racers = getRacerInfo($confirmation_id);
-            header('location: ../race/views/add-racer');
+            include '../race/views/add-racer';
             exit;
           } else {
             $message = "<p>Sorry, the registration was not successful. Please try again.</p>";
             $_SESSION['message'] = $message;
                      
-          include '../race/views/update-racer.php';
+          include '../race/views/race-registration.php';
            exit;    
         }
 
@@ -92,8 +92,8 @@ if ($updateResult === 1) {
 
     $message = "<p class='notify'>You have successfully updated $first_name's registration.</p>";
     $_SESSION['message'] = $message;
-    $racers = getRacerInfo($confirmation_id);
-    print_r($racers);
+    $racer = getRacerInfo($confirmation_id);
+    print_r($racer);
     include '../race/views/update-racer.php';
     exit;
   } else {
@@ -112,10 +112,11 @@ break;
         if ($deleteResult) {
           $message = "<p class='notify'>$first_name's registration was successfully deleted.</p>";
           $_SESSION['message'] = $message;
-          include '../race/views/home.php';
+          include '../race/views/update-racer.php';
         }else {
             $message = "<p>Sorry, the registration was not deleted. Please try again.</p>";
             $_SESSION['message'] = $message;
+            include '../race/views/race-modify.php';
         }
         break; 
         

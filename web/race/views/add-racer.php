@@ -38,6 +38,7 @@ print_r($racers);
         <li><strong>Event: </strong><?php echo $racers['event_name'] ?></li>
         <li><strong>Shirt size: </strong><?php echo $racers['size'] ?></li>
         <li><strong>Confirmation Code: </strong><?php echo $confirmation_id ?></li>
+      </ul>
         <p>Please take note of your confirmation number. You will need it if you would like to modify your registration.</p>
 
     </div>
