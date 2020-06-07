@@ -1,5 +1,6 @@
 <?php
- require_once('functions.php');
+ require_once('../race/model/functions.php');
+ require_once('../race/model/racer-model.php');
  $db = get_db();
 // try {
 //   $dbUrl = getenv('DATABASE_URL');
@@ -112,7 +113,7 @@ if (isset($_POST['confirmation_id'])) {
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
                                                               echo $racerInfo['confirmation_id'];
                                                             } ?>">
-<a href='update-racer?action=delete&id=$confirmation_id' class='button' title='Click to delete'>Delete</a>
+<a href="delete-registration.php?action=delete&id="{$confirmation_id}."" class='button' title='Click to delete'>Delete</a>
                 <a href="index.php" class="button">Cancel</a>
             </form>
       

@@ -1,5 +1,6 @@
 <?php
-require_once('functions.php');
+require_once('../race/model/functions.php');
+require_once('../race/model/racer-model.php');
 $db = get_db();
 print_r($_POST);
 
