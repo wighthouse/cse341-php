@@ -32,8 +32,8 @@ $db = get_db();
       <ul>
         <li><strong>Name: </strong><?php echo $first_name . ' ' . $last_name ?></li>
         <li><strong>Email: </strong><?php echo $email ?></li>
-        <li><strong>Event: </strong><?php echo $racers['event_name'] ?></li>
-        <li><strong>Shirt size: </strong><?php echo $racers['size'] ?></li>
+        <li><strong>Event: </strong><?php echo $racer['event_name'] ?></li>
+        <li><strong>Shirt size: </strong><?php echo $racer['size'] ?></li>
         <li><strong>Confirmation Code: </strong><?php echo $confirmation_id ?></li>
       </ul>
       <p>Your confirmation number has not changed. You will need it if you would like to modify your registration.</p>
