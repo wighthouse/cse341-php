@@ -39,6 +39,7 @@ switch ($action) {
         // Now run the query to find the text in the database, and then save the results as a variable
         $racerInfo = updateQuery($updateRacers, $db);
         // Change the method name
+        include '../race/views/race-modify.php';
         break;  
         
     case 'updateRacer':

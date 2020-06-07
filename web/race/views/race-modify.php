@@ -7,8 +7,6 @@
   print_r($racerInfo);
 
 
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -66,7 +64,7 @@
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
                                                               echo $racerInfo['confirmation_id'];
                                                             } ?>">
-<a href="delete-registration.php?action=delete&id="{$confirmation_id}."" class='button' title='Click to delete'>Delete</a>
+<a href="delete-registration.php?action=delete-registration" class='button' title='Click to delete'>Delete</a>
                 <a href="index.php" class="button">Cancel</a>
             </form>
       
