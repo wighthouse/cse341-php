@@ -17,8 +17,8 @@
             <h1>Hennepin County Peanuts Run</h1>
             <ul>
                 <li><a href="/race/index.php">Race Home</a></li>
-                <li><a href="/race/race-registration.php">Register</a></li>
-                <li><a href="/race/race-modify.php">Modify</a></li>
+                <li><a href="/race/index.php?action=race-registration">Register</a></li>
+                
             </ul>
         </div>
     </nav>

@@ -114,6 +114,9 @@ break;
           $_SESSION['message'] = $message;
           include '../race/views/update-racer.php';
         }else {
+            $updateRacers = validateInput($_POST['confirmation_id']);
+        // Now run the query to find the text in the database, and then save the results as a variable
+        $racerInfo = updateQuery($updateRacers, $db);
             $message = "<p>Sorry, the registration was not deleted. Please try again.</p>";
             $_SESSION['message'] = $message;
             include '../race/views/race-modify.php';

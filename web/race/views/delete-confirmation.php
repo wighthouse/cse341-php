@@ -22,15 +22,13 @@ $db = get_db();
     </header>
     <main>
         <div class="main-container">
-            <h2 class="page-title">Retrieve Registration Information</h2>
+            <h2 class="page-title">Registration Deletion Confirmation</h2>
         </div>
         
-        <div class="main-form modify">
-            <form class="formContainer" action="/race/index.php" method="post">
-                <h3 class="formHeading">Please Enter Your Confirmation Id</h3>
-                <label class="above">Confirmation Id*<input type="text" name="confirmation_id" required></label>
-                <input type="hidden" name="action" value="race-modify">
-                <input type="submit" name="submit" class="button" value="Modify">
+        
+                <h3>Your registration has been successfully deleted.</h3>
+                <h3>THANK YOU!</h3>
+                
         </div>
     </main>
 
