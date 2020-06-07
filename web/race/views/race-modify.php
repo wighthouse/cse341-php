@@ -28,7 +28,7 @@
   <main>
     <div class="main-container">
       <h2 class="page-title">Modify Your Registration</h2>
-      <form class="formContainer" action="update-racer.php" method="post" >
+      <form class="formContainer" action="/race/index.php" method="post" >
       <h3 class="formHeading">Modify Race Registration</h3>
                 <p>Make the necessary changes below.</p>
 
@@ -58,14 +58,15 @@
                     echo $sizeList; ?></label>
                 <input type="submit" name="submit" class="button" value="Update Registration">
                 <!-- Add the action name - value pair -->
-                <input type="hidden" name="action" value="updateRacer">
+                <input type="hidden" name="action" value="update-racer">
                 <input type="hidden" name="confirmation_id" value="<?php if (isset($confirmation_id)) {
                                                                 echo $confirmation_id;
                                                             } elseif (isset($racerInfo['confirmation_id'])) {
                                                               echo $racerInfo['confirmation_id'];
                                                             } ?>">
-<a href="delete-registration.php?action=delete-registration" class='button' title='Click to delete'>Delete</a>
-                <a href="index.php" class="button">Cancel</a>
+<a href="delete-registration.php?action=delete-registration" class='button warning' title='Click to delete'>Delete</a>
+<p>Click cancel to return without making changes.</p>
+                <a href="/race/index.php" class="button cancel">Cancel</a>
             </form>
       
     </div>

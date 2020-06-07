@@ -71,7 +71,7 @@ switch ($action) {
         include '../race/views/race-modify.php';
         break;  
         
-    case 'updateRacer':
+    case 'update-racer':
         // Filter and store the data
  $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
  $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
@@ -97,7 +97,7 @@ if ($updateResult === 1) {
     $message = "<p>Sorry, the product was not updated. Please try again.</p>";
     $_SESSION['message'] = $message;
   }
-  include '../race/views/update-racer.php';
+  include '../race/views/race-modify.php';
   exit;
 
 break;

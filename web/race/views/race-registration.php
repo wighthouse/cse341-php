@@ -26,7 +26,7 @@
 
           
         <div class="main-form register">
-        <form class="formContainer" action="add-racer.php" method="post" >
+        <form class="formContainer" action="/race/index.php" method="post" >
                 <h3 class="formHeading">Register for a Race</h3>
 
                 <label class="above">First name*<input type="text" name="first_name" required 
@@ -45,6 +45,7 @@
                     echo $sizeList; ?></label>
                 
                 <p>*All fields are required</p>
+                <input type="hidden" name="action" value="add-racer">
                 <input type="submit" name="submit" class="button" value="Register">
                 <!-- Add the action name - value pair -->
                 <!-- <input type="hidden" name="action" value="register-racer"> -->
