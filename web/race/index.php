@@ -22,6 +22,7 @@ switch ($action) {
         $searchRacers = validateInput($_POST['event_id']);
         // Now run the query to find the text in the database, and then save the results as a variable
         $racers = searchQuery($searchRacers, $db);
+        include '../race/views/race-query-results.php';
         break;
 
     case 'race-registration':
