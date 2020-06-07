@@ -31,7 +31,36 @@ switch ($action) {
         break;
 
     case 'add-racer':
+        // Filter and store the data
+        $first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
+        $last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+        $shirt_size_id = filter_input(INPUT_POST, 'shirt_size_id', FILTER_SANITIZE_NUMBER_INT);
+        $event_id = filter_input(INPUT_POST, 'event_id', FILTER_SANITIZE_NUMBER_INT);
+    
+        //Attempt the insert
+        $regResults= regRacer(
+            $first_name,
+            $last_name,
+            $email,
+            $shirt_size_id,
+            $event_id);
+        
+        if ($regResult === 1) {
+            $message = "<p class='notify'>You have successfully registered.</p>";
+            $_SESSION['message'] = $message;
+            header('location: ../race/views/add-racer');
+            exit;
+          } else {
+            $message = "<p>Sorry, the registration was not successful. Please try again.</p>";
+            $_SESSION['message'] = $message;
+          }
+          include '../race/views/update-racer.php';
+          exit;    
+        
 
+    $racers = getRacerInfo($confirmation_id);
+    print_r($racers);
         break;
         
     case 'race-modify':
@@ -68,7 +97,7 @@ if ($updateResult === 1) {
     $message = "<p>Sorry, the product was not updated. Please try again.</p>";
     $_SESSION['message'] = $message;
   }
-  include ('views/update-racer.php');
+  include '../race/views/update-racer.php';
   exit;
 
 break;
